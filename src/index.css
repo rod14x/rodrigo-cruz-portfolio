@@ -1,0 +1,27 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+@theme {
+  --color-paper: #f2f4f3;
+  --color-ink: #22292b;
+  --color-rust: #0f6b5f;   /* acento: verde azulado */
+  --color-leaf: #2f6fd6;   /* secundario: azul */
+}
+@layer base {
+  :root { color-scheme: light; font-synthesis: none; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  html { scroll-padding-top: 5rem; }
+  html, body { overflow-x: clip; }
+  body {
+    @apply m-0 min-w-[320px] bg-paper font-sans text-ink;
+    background-image: linear-gradient(rgba(15, 80, 72, 0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(15, 80, 72, 0.06) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+  ::selection { @apply bg-rust text-white; }
+  a:focus-visible, button:focus-visible { @apply rounded outline-2 outline-offset-4 outline-rust; }
+}
+@layer components {
+  .hand { @apply font-hand leading-tight text-zinc-500; }
+  .display { @apply font-display font-bold tracking-[-0.045em] text-ink; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
