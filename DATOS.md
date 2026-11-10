@@ -54,7 +54,7 @@ Reglas: no inventar datos, separar siempre el aporte personal del trabajo del eq
 
 ## 8. Habilidades
 
-- Desarrollo → TypeScript, JavaScript, React.js, Spring Boot, PostgreSQL, full stack, debugging
+- Desarrollo → TypeScript, JavaScript, PHP, Astro, React.js, Spring Boot, PostgreSQL, full stack, debugging
 - Repositorios y despliegue → GitHub, GitFlow, CI/CD, SSH
 - Ciberseguridad → NIST, ISO 27001, seguridad de aplicaciones web, ethical hacking, pruebas de penetración, evaluación de vulnerabilidades, seguridad de redes
 - Infraestructura → redes, mantenimiento de equipos
@@ -63,10 +63,12 @@ Reglas: no inventar datos, separar siempre el aporte personal del trabajo del eq
 
 ## 9. Proyectos
 
-- **NISTrack** · Cloud Tecnologies · https://www.nistrack.com · equipo de tres (Rodrigo + 2 juniors): Rodrigo dirige y es quien más código aporta; ellos también construyeron partes.
-- **ERP Cloud Tecnologies** · interno y privado (sin capturas ni enlace) · equipo de tres: Rodrigo hizo Proyectos (Kanban), dashboard, correcciones tras prueba con Kali, 2FA, asistente IA (Gemini) y despliegue en cPanel; los otros dos hicieron cotizaciones, alertas y reportes. Parte del código con agentes de IA.
-- **Termómetro de Resiliencia Operativa** · https://termometro.cloud-tecnologies.pe · NIST SP 800-34 Rev.1, 20 preguntas, ~5 min, informe PDF, sin cuenta · mismo equipo de tres · evaluación preliminar (no auditoría ni garantía).
-- **Web Cloud Tecnologies** · https://www.cloud-tecnologies.pe · Astro · rediseño, rendimiento, accesibilidad y copy; un compañero hizo animaciones y partners.
+Fuente: historial de git de cada repositorio. Se cuentan commits y PR, no líneas (están infladas por archivos generados y librerías).
+
+- **NISTrack** · https://www.nistrack.com · desde feb. 2026 · equipo de tres (Rodrigo + 2 juniors) · 591 de 1216 commits (~49 %) y 61 PR fusionados. Lo suyo: liderazgo, seguridad (multitenancy, RBAC, rate limiting, cookies HttpOnly, XSS, login y 2FA), riesgos, dashboard gerencial, activos v2, catálogo NIST CSF 2.0 de 106 subcategorías, reportes PDF, landing con radar, n8n + Google Drive, hotfixes de producción. Las releases juntan trabajo de los tres. No publicar nombres de clientes.
+- **ERP Cloud Tecnologies** · privado (sin capturas ni enlace). V1 (desde ene. 2026, equipo de tres): 76 de 120 commits, ~73 % del código vivo; Proyectos (Kanban), dashboard, KPIs bimonetarios, fixes post-Kali, asistente Gemini, despliegue en cPanel. Los otros dos: cotizaciones y motor financiero, alertas por correo, drag & drop del Kanban, reportes PDF. El 2FA se implementó y luego se retiró: no se muestra. V2 (desde oct. 2026): único humano, 142 commits y 58 PR, hecho con agentes de IA (el historial no separa autoría).
+- **Termómetro de Resiliencia Operativa** · https://termometro.cloud-tecnologies.pe · jul.–oct. 2026 · ~52 commits (compañeros: 40 y 6) · base y flujo público, PDF en servidor con colas, correos, panel /admin, CI/CD por lftp, fix XSS de TanStack Start. Evaluación preliminar.
+- **Web Cloud Tecnologies** · https://www.cloud-tecnologies.pe · jun.–sep. 2026 · 34 de 47 commits en main · Astro, rediseño, WebGL, Preact, −712 KB de imágenes, fixes de formulario y memoria, auditoría, copy y conversión, móvil. Un compañero: GSAP, globo 3D, partners, efectos, /servicios, View Transitions. La accesibilidad está en ramas sin fusionar: no se publica hasta que llegue a main.
 - **KeptAI** · Hackathon Piura Innova 2026 · liderazgo técnico, frontend (React + TypeScript), corrección de errores del backend. Sin premios.
 - **Infraestructura IESTP** · colaborador externo · discos del storage Huawei OceanStor Dorado 3000 V6, AP, switches por consola, rotulado, inventario y diagramas Visio. Sin fibra ni diseño del centro de datos.
 
