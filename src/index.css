@@ -1,10 +1,10 @@
 @import "tailwindcss";
 @config "../tailwind.config.js";
 @theme {
-  --color-paper: #f2f4f3;
-  --color-ink: #22292b;
-  --color-rust: #0f6b5f;   /* acento: verde azulado */
-  --color-leaf: #2f6fd6;   /* secundario: azul */
+  --color-paper: #f6f6f7;
+  --color-ink: #18181b;
+  --color-rust: #2f4fd8;   /* acento: azul cobalto */
+  --color-leaf: #0f766e;   /* secundario: verde azulado */
 }
 @layer base {
   :root { color-scheme: light; font-synthesis: none; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
@@ -12,8 +12,8 @@
   html, body { overflow-x: clip; }
   body {
     @apply m-0 min-w-[320px] bg-paper font-sans text-ink;
-    background-image: linear-gradient(rgba(15, 80, 72, 0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(15, 80, 72, 0.06) 1px, transparent 1px);
-    background-size: 22px 22px;
+    background-image: radial-gradient(rgba(24, 24, 27, 0.16) 1px, transparent 1.3px);
+    background-size: 20px 20px;
   }
   ::selection { @apply bg-rust text-white; }
   a:focus-visible, button:focus-visible { @apply rounded outline-2 outline-offset-4 outline-rust; }

@@ -39,10 +39,10 @@ export const skills = [
 // `tint`: color de fondo del marco de la captura.
 // Los textos de cada caso están en content.<idioma>.projects.items.<key>.
 export const projects = [
-  { key: 'nistrack', name: 'NISTrack', image: 'nistrack', art: 'deploy', tags: ['SaaS multitenant|Multi-tenant SaaS', 'NIST CSF 2.0', 'ISO 27001', 'GitHub Actions', 'GitFlow'], tabs: ['software', 'security'], tint: '#dbe7e3' },
-  { key: 'termometro', name: 'Termómetro de Resiliencia|Resilience Thermometer', image: 'termometro', art: 'termometro', tags: ['Continuidad operativa|Business continuity', 'Gestión de riesgos|Risk management'], tabs: ['software', 'security'], tint: '#e4e2d8' },
-  { key: 'keptai', name: 'KeptAI', image: 'keptai', art: 'keptai', year: '2026', tags: ['React', 'TypeScript', 'Spring Boot', 'PostgreSQL'], tabs: ['software'], tint: '#dde4ee' },
-  { key: 'iestp', name: 'Infraestructura IESTP|IESTP infrastructure', image: 'iestp', art: 'network', tags: ['Huawei OceanStor Dorado 3000 V6', 'Switching', 'Microsoft Visio'], tabs: ['infra'], tint: '#e6e1e8' },
+  { key: 'nistrack', name: 'NISTrack', image: 'nistrack', art: 'deploy', tags: ['SaaS multitenant|Multi-tenant SaaS', 'NIST CSF 2.0', 'ISO 27001', 'GitHub Actions', 'GitFlow'], tabs: ['software', 'security'], tint: '#dfe3f1' },
+  { key: 'termometro', name: 'Termómetro de Resiliencia|Resilience Thermometer', image: 'termometro', art: 'termometro', tags: ['Continuidad operativa|Business continuity', 'Gestión de riesgos|Risk management'], tabs: ['software', 'security'], tint: '#e7e5e2' },
+  { key: 'keptai', name: 'KeptAI', image: 'keptai', art: 'keptai', year: '2026', tags: ['React', 'TypeScript', 'Spring Boot', 'PostgreSQL'], tabs: ['software'], tint: '#dde6ee' },
+  { key: 'iestp', name: 'Infraestructura IESTP|IESTP infrastructure', image: 'iestp', art: 'network', tags: ['Huawei OceanStor Dorado 3000 V6', 'Switching', 'Microsoft Visio'], tabs: ['infra'], tint: '#e4e2ea' },
 ]
 
 // Muro del inicio: 4 columnas de piezas.

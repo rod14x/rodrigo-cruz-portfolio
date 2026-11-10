@@ -8,7 +8,7 @@ import { Link, Rich } from '../components/Core.jsx'
 import { Burst, CodeArt, DashedArrow, Doodle, Eyes, SparkLines, SparkStar, Squiggle } from '../components/Decor.jsx'
 
 // Colores de la curva (los mismos que --color-rust y --color-leaf en index.css).
-const ACCENT = '#0f6b5f', LEAF = '#2f6fd6'
+const ACCENT = '#2f4fd8', LEAF = '#0f766e'
 
 // Vuelo del mazo, en alturas de ventana de scroll:
 // 0 → RISE_END: el mazo sube y se abre en abanico.
