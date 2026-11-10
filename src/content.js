@@ -22,7 +22,7 @@ export const contact = {
 
 // Habilidades agrupadas (sin niveles). Los nombres de los grupos están en content.<idioma>.about.groups.
 export const skills = [
-  { key: 'dev', items: ['TypeScript', 'JavaScript', 'PHP', 'Astro', 'React.js', 'Spring Boot', 'PostgreSQL', 'Desarrollo full stack|Full-stack development', 'Desarrollo de software|Software development', 'Debugging', 'Ingeniería|Engineering'] },
+  { key: 'dev', items: ['TypeScript', 'JavaScript', 'PHP', 'Laravel', 'Astro', 'React.js', 'Spring Boot', 'PostgreSQL', 'Desarrollo full stack|Full-stack development', 'Desarrollo de software|Software development', 'Debugging', 'Ingeniería|Engineering'] },
   { key: 'devops', items: ['GitHub', 'GitFlow', 'CI/CD', 'SSH'] },
   { key: 'security', items: ['Ciberseguridad|Cybersecurity', 'NIST', 'ISO 27001', 'Seguridad de aplicaciones web|Web application security', 'Ethical hacking', 'Pruebas de penetración|Penetration testing', 'Evaluación de vulnerabilidades|Vulnerability assessment', 'Seguridad de redes|Network security'] },
   { key: 'infra', items: ['Redes|Networking', 'Mantenimiento de equipos|Computer maintenance'] },
@@ -39,8 +39,8 @@ export const skills = [
 // `tint`: color de fondo del marco de la captura.
 // Los textos de cada caso están en content.<idioma>.projects.items.<key>.
 export const projects = [
-  { key: 'nistrack', name: 'NISTrack', image: 'nistrack', art: 'deploy', live: 'https://www.nistrack.com', year: '2026', tags: ['SaaS multitenant|Multi-tenant SaaS', 'NIST CSF 2.0', 'ISO 27001', 'RBAC · 2FA', 'n8n'], tabs: ['software', 'security'], tint: '#dfe3f1' },
-  { key: 'erp', name: 'ERP Cloud Tecnologies', image: 'erp', art: 'erp', year: '2026', tags: ['PHP', 'React + Inertia', 'IA · Gemini|AI · Gemini', 'GitHub Actions'], tabs: ['software', 'security'], tint: '#e3e6ec' },
+  { key: 'nistrack', name: 'NISTrack', image: 'nistrack', art: 'deploy', live: 'https://www.nistrack.com', year: '2026', tags: ['Laravel', 'SaaS multitenant|Multi-tenant SaaS', 'NIST CSF 2.0', 'ISO 27001', 'RBAC · 2FA'], tabs: ['software', 'security'], tint: '#dfe3f1' },
+  { key: 'erp', name: 'ERP Cloud Tecnologies', image: 'erp', art: 'erp', year: '2026', tags: ['Laravel', 'React + Inertia', 'IA · Gemini|AI · Gemini', 'GitHub Actions'], tabs: ['software', 'security'], tint: '#e3e6ec' },
   { key: 'termometro', name: 'Termómetro de Resiliencia|Resilience Thermometer', image: 'termometro', art: 'termometro', live: 'https://termometro.cloud-tecnologies.pe', year: '2026', tags: ['NIST SP 800-34', 'TanStack Start', 'PostgreSQL', 'PDF en servidor|Server-side PDF'], tabs: ['software', 'security'], tint: '#e7e5e2' },
   { key: 'web-cloud', name: 'Web Cloud Tecnologies|Cloud Tecnologies website', image: 'web-cloud', art: 'deploy', live: 'https://www.cloud-tecnologies.pe', year: '2026', tags: ['Astro', 'Preact', 'WebGL', 'Vercel'], tabs: ['software'], tint: '#ece6e0' },
   { key: 'keptai', name: 'KeptAI', image: 'keptai', art: 'keptai', year: '2026', tags: ['React', 'TypeScript', 'Spring Boot', 'PostgreSQL'], tabs: ['software'], tint: '#dde6ee' },
@@ -111,7 +111,7 @@ export const content = {
             'V1: correcciones de seguridad tras una prueba con Kali Linux.',
             'V1: asistente con IA (Gemini) que responde sobre los datos reales del ERP.',
             'V1: despliegue a producción en cPanel con un único script SQL de instalación, y cierre de una fuga de logs y archivos de prueba que se publicaban.',
-            'V2: migración a PHP con React e Inertia, con pruebas automatizadas, integración continua en GitHub Actions y documentación de decisiones y despliegue.',
+            'V2: migración a Laravel con React e Inertia, con pruebas automatizadas, integración continua en GitHub Actions y documentación de decisiones y despliegue.',
           ],
           team: 'V1: éramos tres. Según git, firmé 76 de los 120 commits y cerca del 73 % del código propio que sigue vivo. Los otros dos hicieron el módulo de cotizaciones y el motor financiero, las alertas por correo, el arrastrar y soltar del Kanban y los reportes en PDF. V2: soy el único desarrollador humano y trabajo con agentes de IA (Claude Code, entre otros); el historial no separa lo que escribieron ellos de lo que escribí yo. Yo defino el trabajo, reviso y fusiono los 58 Pull Requests.',
           evidence: [{ label: 'Historial de git de los dos repositorios (privados)' }],
@@ -317,7 +317,7 @@ export const content = {
             'V1: security fixes after a test with Kali Linux.',
             'V1: AI assistant (Gemini) that answers questions about the ERP’s real data.',
             'V1: production deployment on cPanel with a single SQL install script, and closing a leak of logs and test files that were being published.',
-            'V2: migration to PHP with React and Inertia, with automated tests, continuous integration on GitHub Actions and documented decisions and deployment.',
+            'V2: migration to Laravel with React and Inertia, with automated tests, continuous integration on GitHub Actions and documented decisions and deployment.',
           ],
           team: 'V1: there were three of us. According to git, I authored 76 of the 120 commits and about 73% of the project’s own code that is still live. The other two built the quotes module and the financial engine, the email alerts, the Kanban drag and drop and the PDF reports. V2: I am the only human developer and I work with AI agents (Claude Code, among others); the history does not separate what they wrote from what I wrote. I define the work and review and merge the 58 Pull Requests.',
           evidence: [{ label: 'Git history of both (private) repositories' }],
