@@ -101,7 +101,7 @@ export const content = {
         erp: {
           org: 'Cloud Tecnologies · uso interno', badge: 'Dueño del repositorio · Desarrollo',
           title: 'Construí la mayor parte del ERP interno de Cloud Tecnologies y hoy dirijo su segunda versión, hecha con agentes de IA.',
-          desc: 'Sistema interno de gestión de la empresa: proyectos, cotizaciones, finanzas y tareas. Es privado: aquí describo mi trabajo sin capturas ni datos reales.',
+          desc: 'Sistema interno de gestión de la empresa: proyectos, cotizaciones, finanzas y tareas. Es privado: la única captura es la pantalla de inicio de sesión, y no muestro datos reales.',
           context: 'Herramienta interna de Cloud Tecnologies en dos etapas: la primera versión, que empezamos tres personas en enero de 2026, y una segunda versión que empecé en octubre de 2026 para migrar el sistema.',
           problem: 'Reunir en un solo sistema la gestión interna de la empresa y, con la segunda versión, rehacerlo sobre una base con pruebas automatizadas, integración continua y documentación.',
           role: [
@@ -169,7 +169,7 @@ export const content = {
           org: 'Colaborador externo', badge: 'Apoyo en implementación',
           title: 'Participé en la instalación de almacenamiento empresarial y red de un instituto tecnológico.',
           desc: 'Instalación del storage Huawei OceanStor Dorado 3000 V6, conexión de puntos de acceso, configuración de switches por consola y documentación de la red.',
-          context: 'Proyecto de infraestructura en un IESTP (instituto de educación superior tecnológico) en el que participé como colaborador externo, de forma independiente a mi rol en Cloud Tecnologies.',
+          context: 'Proyecto de infraestructura en un IESTP (instituto de educación superior tecnológico) en el que participé como colaborador externo dentro del equipo de implementación.',
           problem: 'Poner en marcha el almacenamiento empresarial y dejar la red conectada, identificada y documentada para su operación.',
           role: [
             'Instalación física de los discos del storage Huawei OceanStor Dorado 3000 V6 y apoyo general en su implementación.',
@@ -307,7 +307,7 @@ export const content = {
         erp: {
           org: 'Cloud Tecnologies · internal use', badge: 'Repository owner · Development',
           title: 'I built most of Cloud Tecnologies’ internal ERP, and I now lead its second version, built with AI agents.',
-          desc: 'The company’s internal management system: projects, quotes, finance and tasks. It is private: here I describe my work without screenshots or real data.',
+          desc: 'The company’s internal management system: projects, quotes, finance and tasks. It is private: the only screenshot is the login screen, and I show no real data.',
           context: 'An internal Cloud Tecnologies tool in two stages: the first version, which three of us started in January 2026, and a second version I started in October 2026 to migrate the system.',
           problem: 'Bring the company’s internal management into a single system and, with the second version, rebuild it on a foundation with automated tests, continuous integration and documentation.',
           role: [
@@ -375,7 +375,7 @@ export const content = {
           org: 'External collaborator', badge: 'Implementation support',
           title: 'I took part in installing enterprise storage and networking for a technical institute.',
           desc: 'Installing the Huawei OceanStor Dorado 3000 V6 storage, connecting access points, configuring switches over console and documenting the network.',
-          context: 'Infrastructure project at an IESTP (a technical higher-education institute) where I worked as an external collaborator, independently from my role at Cloud Tecnologies.',
+          context: 'Infrastructure project at an IESTP (a technical higher-education institute) where I worked as an external collaborator on the implementation team.',
           problem: 'Bring the enterprise storage online and leave the network connected, labeled and documented for operation.',
           role: [
             'Physically installing the disks of the Huawei OceanStor Dorado 3000 V6 storage and general support during its implementation.',
