@@ -1,111 +1,87 @@
 # Ficha de datos del portafolio
 
-Esta ficha reúne **todo lo que el portafolio necesita sobre ti**. Hay dos formas de usarla:
+Registro de los datos cargados en el portafolio de Rodrigo Cruz. Para cambiar algo, edita esta ficha y pídele a tu agente de IA: *"Carga mis datos de DATOS.md en el portafolio"*.
 
-- **Rellénala tú** (escribe después de cada `→`) y luego pídele a tu agente de IA: *"Carga mis datos de DATOS.md en el portafolio"*.
-- **O déjala vacía** y pídele a tu agente: *"Ayúdame a completar mi portafolio"*. El agente te hará estas preguntas por bloques.
-
-Lo marcado con **(obligatorio)** es necesario para publicar. Lo demás es opcional: si lo dejas vacío, el agente quita esa parte o deja un texto neutro, nunca inventa datos.
-
-Atajo útil: si tienes tu **CV en PDF** o tu **perfil de LinkedIn exportado en PDF** (LinkedIn → tu perfil → *Más* → *Guardar como PDF*), cópialo a la carpeta `public/cv/` y dile al agente que lo lea. Así podrá sacar casi todo de ahí y solo te preguntará lo que falte.
+Reglas: no inventar datos, separar siempre el aporte personal del trabajo del equipo y no publicar teléfono, código de estudiante, datos de clientes ni capturas privadas. Todo lo que está en `public/` y en este repositorio es público.
 
 ---
 
-## 1. Identidad (obligatorio)
+## 1. Identidad
 
-- Nombre corto para el header (ej. "Ana Pérez") → 
-- Nombre completo para el footer → 
-- Iniciales (2 letras, para el favicon y la foto vacía) → 
-- Rol o título (ej. "Desarrollador Web Jr.", "Frontend Developer") → 
-- Ciudad y país → 
-- Frase corta bajo tu nombre (ej. "backend & full-stack", "frontend y diseño UI") → 
+- Nombre corto para el header → Rodrigo Cruz
+- Nombre completo para el footer → Rodrigo Cruz
+- Iniciales → RC
+- Rol → Tech Lead · Software SaaS, ciberseguridad e infraestructura
+- Ciudad y país → Piura, Perú
+- Frase corta bajo el nombre → tech lead · ciberseguridad
 
-## 2. Contacto (obligatorio)
+## 2. Contacto
 
-- Email → 
-- URL de LinkedIn → 
-- URL de GitHub → 
-- ¿Tienes CV en PDF? Si sí, cópialo a `public/cv/cv.pdf` → sí / no
+- Email → german.rodrigo.cruz14@gmail.com
+- LinkedIn → https://www.linkedin.com/in/rodrigo-cruz-5a9988356/
+- GitHub → https://github.com/rod14x (los repos de la empresa son privados: no se enlazan)
+- CV en PDF → no (cuando haya uno sin teléfono: `public/cv/cv.pdf` y `contact.cv: '/cv/cv.pdf'`)
 
-## 3. Portada (inicio)
+## 3. Portada
 
-- Titular principal. Por defecto: *"Construyo aplicaciones web que simplemente… funcionan"*. Puedes dejarlo o escribir el tuyo → 
-- Frase lateral. Por defecto: *"construyo productos de punta a punta, de la base de datos al deploy"* → 
+- Titular → "Lidero equipos que construyen y despliegan software… seguro"
+- Frase lateral → "Tech Lead en Cloud Tecnologies: SaaS, CI/CD, ciberseguridad e infraestructura."
 
 ## 4. Sobre mí
 
-- Qué estudias o estudiaste, y en qué ciclo o año vas → 
-- Una o dos frases sobre qué te gusta construir → 
-- Qué haces hoy (trabajo, prácticas o freelance) y con qué tecnologías → 
-- Cómo usas la IA en tu trabajo (opcional) → 
-- Tus logros más importantes: hackathons, premios, docencia, etc. (opcional) → 
+- Estudios → Estudiante de Ingeniería de Sistemas e Informática, UTP (sin indicar ciclo)
+- Enfoque → ciberseguridad aplicada al desarrollo y automatización de flujos de desarrollo; dirección profesional hacia DevSecOps y Cloud
+- Hoy → Tech Lead en Cloud Tecnologies: coordina el equipo, GitFlow, revisión de PR, CI/CD con GitHub Actions y SSH
+- IA → apoyo al desarrollo y a la revisión de código; en los repos de la empresa hay código escrito a mano y con agentes de IA
+- Logros → Ethical Hacking Professional Certificate (CertiProf); participación en la Hackathon Piura Innova 2026
 
-## 5. Experiencia (una entrada por trabajo, del más reciente al más antiguo)
+## 5. Experiencia
 
-Para cada trabajo:
-
-- Puesto → 
-- Empresa → 
-- Ciudad → 
-- Fecha de inicio y fin (o "actualidad") → 
-- De 2 a 4 logros o responsabilidades: qué hiciste, con qué tecnologías y qué resultado tuvo → 
-
-Si no tienes experiencia laboral, el agente puede dejar solo prácticas, voluntariados o proyectos académicos, o quitar la sección.
+- Tech Lead · Cloud Tecnologies · Piura · desde oct. 2024 · tiempo parcial, híbrido. Ingresó como programador (fecha de paso a Tech Lead sin confirmar: no se publica).
+- Colaborador externo de infraestructura · IESTP (instituto de educación superior tecnológica). No es proyecto de Cloud Tecnologies.
 
 ## 6. Educación
 
-- Carrera → 
-- Universidad o instituto (nombre corto también, ej. "UNI", "UTP") → 
-- Ciudad → 
-- Fechas → 
-- Logros académicos (tercio superior, grupos, beca…) → 
+- Ingeniería de Sistemas e Informática · Universidad Tecnológica del Perú (UTP) · 2022 — 2026 · estudiante (no graduado)
 
-## 7. Certificados (opcional)
+## 7. Certificados
 
-Uno por línea: título, entidad, año. Marca con ⭐ el más importante.
-
-- → 
+- ⭐ Ethical Hacking Professional Certificate · CertiProf · mar. 2026 – mar. 2029
+- Sophos Certification · Sophos · mar. 2024 – ene. 2026 (vencida)
+- Fortinet NSE 3: Certified Associate · Fortinet · dic. 2023 – dic. 2024 (vencida)
+- Fortinet NSE 1: Certified Associate · Fortinet · ene. 2023 – dic. 2025 (vencida)
+- Constancia: Hackathon Regional de Innovación Piura Innova 2026 · GDG Piura · oct. 2026
 
 ## 8. Habilidades
 
-Escribe solo lo que puedas defender en una entrevista. Deja vacíos los grupos que no apliquen.
+- Desarrollo → TypeScript, JavaScript, React.js, Spring Boot, PostgreSQL, full stack, debugging
+- Repositorios y despliegue → GitHub, GitFlow, CI/CD, SSH
+- Ciberseguridad → NIST, ISO 27001, seguridad de aplicaciones web, ethical hacking, pruebas de penetración, evaluación de vulnerabilidades, seguridad de redes
+- Infraestructura → redes, mantenimiento de equipos
+- IA → IA generativa, prompt engineering
+- Liderazgo y negocio → liderazgo técnico, trabajo en equipo, comunicación, estrategia, ventas
 
-- Lenguajes → 
-- Backend → 
-- Frontend → 
-- Bases de datos → 
-- Mobile → 
-- Cloud y DevOps → 
-- Testing y QA → 
-- Arquitectura y paradigmas → 
+## 9. Proyectos
 
-## 9. Proyectos (de 1 a 6)
+- **NISTrack** · Cloud Tecnologies · https://www.nistrack.com · equipo de tres (Rodrigo + 2 juniors): Rodrigo dirige y es quien más código aporta; ellos también construyeron partes.
+- **ERP Cloud Tecnologies** · interno y privado (sin capturas ni enlace) · equipo de tres: Rodrigo hizo Proyectos (Kanban), dashboard, correcciones tras prueba con Kali, 2FA, asistente IA (Gemini) y despliegue en cPanel; los otros dos hicieron cotizaciones, alertas y reportes. Parte del código con agentes de IA.
+- **Termómetro de Resiliencia Operativa** · https://termometro.cloud-tecnologies.pe · NIST SP 800-34 Rev.1, 20 preguntas, ~5 min, informe PDF, sin cuenta · mismo equipo de tres · evaluación preliminar (no auditoría ni garantía).
+- **Web Cloud Tecnologies** · https://www.cloud-tecnologies.pe · Astro · rediseño, rendimiento, accesibilidad y copy; un compañero hizo animaciones y partners.
+- **KeptAI** · Hackathon Piura Innova 2026 · liderazgo técnico, frontend (React + TypeScript), corrección de errores del backend. Sin premios.
+- **Infraestructura IESTP** · colaborador externo · discos del storage Huawei OceanStor Dorado 3000 V6, AP, switches por consola, rotulado, inventario y diagramas Visio. Sin fibra ni diseño del centro de datos.
 
-Para cada proyecto:
+## 10. Eventos
 
-- Nombre → 
-- Año → 
-- Contexto (empresa, curso, hackathon o "proyecto personal") → 
-- Título de una línea, en primera persona (ej. "Desarrollé una tienda online con pagos integrados") → 
-- Descripción corta: qué hace y con qué tecnologías → 
-- Tecnologías (3 a 5 tags) → 
-- URL en producción (si existe) → 
-- URL del repositorio (si es público) → 
-- ¿Usa IA? → sí / no
-- Captura: guarda `src/assets/projects/<nombre-del-proyecto>.webp` (16:10, ~1280×800). Si no hay, se dibuja una ilustración de código.
+- Hackathon Piura Innova 2026 · 10 y 11 de oct. de 2026 · Piura · GDG Piura y Cámara de Comercio de Piura
+- CEO Summit 2026 · Empresas Resilientes · Casa Andina, Piura · asistente en representación de Cloud Tecnologies (fecha exacta sin confirmar)
 
-## 10. Laboratorio (opcional)
+## 11. Imágenes
 
-Experimentos o cosas que aprendiste por tu cuenta (servidores, librerías, scripts). Para cada uno: título, área (ej. DevOps, Datos, IA), descripción de una línea y tecnologías.
+- Capturas de proyecto → `nistrack.webp`, `termometro.webp`, `web-cloud.webp` (páginas públicas, 1280×800)
+- Pendientes → foto de perfil (sin marco #OpenToWork), fotos del storage y gabinetes, diagramas de Visio, fotos del CEO Summit y de la hackathon (van en `src/assets/galeria/<caso>/`)
+- Imagen para redes → `public/og.png`
 
-- → 
+## 12. Publicación
 
-## 11. Imágenes (opcional, pero recomendadas)
-
-- **Foto:** `src/assets/about/` (vertical 4:5).
-- **Capturas para el muro del inicio:** `src/assets/wall/muro-1.webp` … `muro-9.webp`. `muro-2`, `muro-3` y `muro-8` son verticales (capturas de móvil).
-- **Imagen para redes:** `public/og.png` (1200×630). Es la vista previa al compartir el enlace.
-
-## 12. Publicación (después de desplegar)
-
-- URL final del portafolio (ej. `https://ana-perez.vercel.app`) → 
+- Hosting → Vercel, con subdominio de la empresa (propuesto: `rodrigo.cloud-tecnologies.pe`)
+- URL final → pendiente

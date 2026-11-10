@@ -110,6 +110,7 @@ const arts = {
   gitflow: { file: 'gitflow', lines: [['$ ', 'git checkout -b feature/…'], ['$ ', 'git push -u origin feature/…'], ['→ ', 'Pull Request → develop'], ['✔ ', 'review aprobado|review approved'], ['$ ', 'git merge --no-ff']] },
   network: { file: 'inventario.csv|inventory.csv', lines: [['# ', 'gabinete,puerto,equipo|cabinet,port,device'], ['', 'GAB-01,P01,AP-01'], ['', 'GAB-01,P02,AP-02'], ['', 'GAB-02,P01,SW-01'], ['# ', 'diagrama: físico + lógico|diagram: physical + logical']] },
   termometro: { file: 'README.md', lines: [['# ', 'Termómetro de Resiliencia|Resilience Thermometer'], ['> ', 'evaluación preliminar gratuita|free preliminary assessment'], ['', ''], ['- ', 'riesgos y contingencias|risks and contingencies'], ['- ', 'brechas → acciones de mejora|gaps → improvement actions']] },
+  erp: { file: 'erp · Cloud Tecnologies', lines: [['✔ ', 'proyectos · kanban|projects · kanban'], ['✔ ', 'dashboard'], ['✔ ', '2FA'], ['✔ ', 'asistente IA · Gemini|AI assistant · Gemini'], ['→ ', 'deploy · cPanel']] },
   keptai: { file: 'README.md', lines: [['# ', 'KeptAI'], ['> ', 'Piura Innova 2026 · Reto 6|Piura Innova 2026 · Challenge 6'], ['', ''], ['- ', 'pagos por WhatsApp → conciliación|WhatsApp payments → reconciliation'], ['- ', 'rentabilidad por pedido|profit per order']] },
 }
 

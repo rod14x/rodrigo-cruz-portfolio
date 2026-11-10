@@ -58,7 +58,7 @@ Al terminar, puedes ofrecer rellenar `DATOS.md` con lo cargado, para que quede c
 
 - `key`: identificador sin espacios ni tildes (ej. `tienda-online`).
 - `name`: admite `'español|English'`.
-- `image`: nombre del archivo en `src/assets/projects/` sin extensión (normalmente igual a `key`). Si no existe, se muestra la ilustración `art` (`deploy`, `gitflow`, `network`, `termometro`, `keptai`; están en `src/components/Decor.jsx`).
+- `image`: nombre del archivo en `src/assets/projects/` sin extensión (normalmente igual a `key`). Si no existe, se muestra la ilustración `art` (`deploy`, `gitflow`, `network`, `erp`, `termometro`, `keptai`; están en `src/components/Decor.jsx`).
 - `live` (URL en producción) y/o `code` (repositorio): opcionales. Si no hay, no se muestra botón externo; en el inicio, cada proyecto lleva a su caso en `/proyectos#<key>`.
 - `tabs`: pestañas de `/proyectos` donde aparece: `software`, `security`, `infra`.
 - `tint`: color pastel de fondo del marco (ej. `#e9e4dc`). Usa un tono distinto por proyecto.
