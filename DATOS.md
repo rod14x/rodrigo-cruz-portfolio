@@ -46,7 +46,7 @@ Reglas: no inventar datos, separar siempre el aporte personal del trabajo del eq
 
 ## 7. Certificados
 
-- ⭐ Ethical Hacking Professional Certificate · CertiProf · mar. 2026 – mar. 2029
+- ⭐ Ethical Hacking Professional Certification (CEHPC™) · CertiProf · 22 mar. 2026 – 21 mar. 2029
 - Sophos Certification · Sophos · mar. 2024 – ene. 2026 (vencida)
 - Fortinet NSE 3: Certified Associate · Fortinet · dic. 2023 – dic. 2024 (vencida)
 - Fortinet NSE 1: Certified Associate · Fortinet · ene. 2023 – dic. 2025 (vencida)
@@ -66,7 +66,7 @@ Reglas: no inventar datos, separar siempre el aporte personal del trabajo del eq
 Fuente: historial de git de cada repositorio. Se cuentan commits y PR, no líneas (están infladas por archivos generados y librerías).
 
 - **NISTrack** · https://www.nistrack.com · Laravel · desde feb. 2026 · equipo de tres (Rodrigo + 2 juniors) · 591 de 1216 commits (~49 %) y 61 PR fusionados. Lo suyo: liderazgo, seguridad (multitenancy, RBAC, rate limiting, cookies HttpOnly, XSS, login y 2FA), riesgos, dashboard gerencial, activos v2, catálogo NIST CSF 2.0 de 106 subcategorías, reportes PDF, landing con radar, n8n + Google Drive, hotfixes de producción. Las releases juntan trabajo de los tres. No publicar nombres de clientes.
-- **ERP Cloud Tecnologies** · privado (sin capturas ni enlace). V1 (desde ene. 2026, equipo de tres): 76 de 120 commits, ~73 % del código vivo; Proyectos (Kanban), dashboard, KPIs bimonetarios, fixes post-Kali, asistente Gemini, despliegue en cPanel. Los otros dos: cotizaciones y motor financiero, alertas por correo, drag & drop del Kanban, reportes PDF. El 2FA se implementó y luego se retiró: no se muestra. V2 (desde oct. 2026, Laravel + React con Inertia, desarrollo local con Laravel Herd): único humano, 142 commits y 58 PR, hecho con agentes de IA (el historial no separa autoría).
+- **ERP Cloud Tecnologies** · privado (sin capturas ni enlace). V1 (desde ene. 2026, equipo de tres): 76 de 120 commits, ~73 % del código vivo; Proyectos (Kanban), dashboard, KPIs bimonetarios, fixes post-Kali, asistente Gemini, despliegue en cPanel. Los otros dos: cotizaciones y motor financiero, alertas por correo, drag & drop del Kanban, reportes PDF. El 2FA (TOTP) se quitó temporalmente por la migración; volverá en la V2. V2 (desde oct. 2026, Laravel + React con Inertia, desarrollo local con Laravel Herd): único humano, 142 commits y 58 PR, hecho con agentes de IA (el historial no separa autoría).
 - **Termómetro de Resiliencia Operativa** · https://termometro.cloud-tecnologies.pe · jul.–oct. 2026 · ~52 commits (compañeros: 40 y 6) · base y flujo público, PDF en servidor con colas, correos, panel /admin, CI/CD por lftp, fix XSS de TanStack Start. Evaluación preliminar.
 - **Web Cloud Tecnologies** · https://www.cloud-tecnologies.pe · jun.–sep. 2026 · 34 de 47 commits en main · Astro, rediseño, WebGL, Preact, −712 KB de imágenes, fixes de formulario y memoria, auditoría, copy y conversión, móvil. Un compañero: GSAP, globo 3D, partners, efectos, /servicios, View Transitions. La accesibilidad está en ramas sin fusionar: no se publica hasta que llegue a main.
 - **KeptAI** · Hackathon Piura Innova 2026 · liderazgo técnico, frontend (React + TypeScript), corrección de errores del backend. Sin premios.
