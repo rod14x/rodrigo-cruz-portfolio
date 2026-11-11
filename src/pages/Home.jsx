@@ -5,7 +5,7 @@ import { ArrowRight, ArrowUpRight, Mail, MapPin } from 'lucide-react'
 import { contact, projects, wall } from '../content.js'
 import { projectImages, routes, useLang, wallImages, wallVideos } from '../lib.js'
 import { Link, Rich } from '../components/Core.jsx'
-import { Burst, CodeArt, DashedArrow, Doodle, Eyes, SparkLines, SparkStar, Squiggle } from '../components/Decor.jsx'
+import { Burst, CodeArt, DashedArrow, Doodle, SparkLines, SparkStar, Squiggle, TerminalCursor } from '../components/Decor.jsx'
 
 // Colores de la curva (los mismos que --color-rust y --color-leaf en index.css).
 const ACCENT = '#2f4fd8', LEAF = '#0f766e'
@@ -85,7 +85,7 @@ function Intro() {
           <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="hand mb-1 ml-1 flex items-end gap-1 text-xl sm:text-2xl"><Doodle className="mb-3 w-5 text-zinc-500" />{t.hero.hello}<Squiggle className="w-6 text-zinc-500" /></motion.p>
           <motion.h1 id="hero-title" initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.1, ease: [0.2, 0.7, 0.2, 1] }} className="display text-[2.5rem] leading-[1.04] sm:text-[3.4rem] lg:text-[4.1rem]">
             {t.hero.headline[0]}{' '}
-            <span className="inline-flex items-center gap-2 whitespace-nowrap align-baseline"><motion.span initial={{ scale: 0.6, rotate: -8, opacity: 0 }} animate={{ scale: 1, rotate: 0, opacity: 1 }} transition={{ type: 'spring', stiffness: 260, damping: 14, delay: 0.55 }} className="inline-block rounded-full bg-rust px-[0.28em] pb-[0.1em] pt-[0.02em] text-white">{t.hero.headline[1]}</motion.span><Eyes /></span>
+            <span className="inline-flex items-center gap-2 whitespace-nowrap align-baseline"><motion.span initial={{ scale: 0.6, rotate: -8, opacity: 0 }} animate={{ scale: 1, rotate: 0, opacity: 1 }} transition={{ type: 'spring', stiffness: 260, damping: 14, delay: 0.55 }} className="inline-block rounded-full bg-rust px-[0.28em] pb-[0.1em] pt-[0.02em] text-white">{t.hero.headline[1]}</motion.span><TerminalCursor /></span>
           </motion.h1>
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.9 }} className="hand mt-3 text-right text-lg sm:mr-[12%] sm:text-xl">{t.hero.side[0]}<br />{t.hero.side[1]}</motion.p>
           <motion.a href="#proyectos" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.2 }} className="hand mx-auto mt-14 flex w-fit flex-col items-center text-lg transition-colors hover:text-ink sm:text-xl">{t.hero.how}<DashedArrow className="mt-1 h-9 w-4" /></motion.a>

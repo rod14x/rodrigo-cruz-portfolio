@@ -12,16 +12,18 @@
   html, body { overflow-x: clip; }
   body {
     @apply m-0 min-w-[320px] bg-paper font-sans text-ink;
-    background-image: radial-gradient(rgba(24, 24, 27, 0.16) 1px, transparent 1.3px);
+    background-image: radial-gradient(rgba(24, 24, 27, 0.09) 1px, transparent 1.3px);
     background-size: 20px 20px;
   }
   ::selection { @apply bg-rust text-white; }
   a:focus-visible, button:focus-visible { @apply rounded outline-2 outline-offset-4 outline-rust; }
 }
 @layer components {
+  .terminal-cursor { animation: blink 1.1s steps(1) infinite; }
   .hand { @apply font-hand leading-tight text-zinc-500; }
   .display { @apply font-display font-bold tracking-[-0.045em] text-ink; }
 }
+@keyframes blink { 50% { opacity: 0; } }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }

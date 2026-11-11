@@ -1,25 +1,8 @@
-import { useEffect, useRef } from 'react'
 import { useLang } from '../lib.js'
 
-// Ojos que siguen al cursor; se quedan quietos con movimiento reducido.
-export function Eyes({ className = '' }) {
-  const pupils = useRef([])
-  useEffect(() => {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
-    const move = e => pupils.current.forEach(p => {
-      if (!p) return
-      const r = p.parentElement.getBoundingClientRect()
-      const a = Math.atan2(e.clientY - (r.top + r.height / 2), e.clientX - (r.left + r.width / 2))
-      p.style.transform = `translate(${Math.cos(a) * 3}px, ${Math.sin(a) * 5}px)`
-    })
-    window.addEventListener('pointermove', move)
-    return () => window.removeEventListener('pointermove', move)
-  }, [])
-  return (
-    <span aria-hidden="true" className={`inline-flex gap-[0.06em] align-middle ${className}`}>
-      {[0, 1].map(i => <span key={i} className="flex h-[0.62em] w-[0.42em] items-center justify-center rounded-full border-[0.06em] border-rust bg-white"><span ref={el => { pupils.current[i] = el }} className="h-[0.3em] w-[0.2em] rounded-full bg-zinc-900 transition-transform duration-75" /></span>)}
-    </span>
-  )
+// Cursor de terminal que parpadea; quieto con movimiento reducido (ver index.css).
+export function TerminalCursor({ className = '' }) {
+  return <span aria-hidden="true" className={`terminal-cursor inline-block h-[0.82em] w-[0.14em] translate-y-[0.04em] rounded-[1px] bg-rust ${className}`} />
 }
 
 // Estrella de picos irregulares.
