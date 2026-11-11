@@ -106,6 +106,8 @@ src/pages/            ← Home (/), Works (/proyectos: casos), About (/sobre-mi:
 - `lucide-react` está fijado en `0.468.0`, porque esa versión todavía exporta los íconos `Github` y `Linkedin`. No lo actualices sin cambiar esos íconos.
 - Tailwind 4 se configura con `@config "../tailwind.config.js"` en `src/index.css` y PostCSS (`@tailwindcss/postcss`).
 - La web respeta `prefers-reduced-motion`: sin animaciones si el sistema lo pide.
+- `vercel.json` define cabeceras de seguridad, incluida una CSP que solo permite recursos propios y Google Fonts. Si agregas un recurso externo (otra fuente, un script, un video de YouTube), permítelo en la CSP o el navegador lo bloqueará.
+- Los videos del muro (`src/assets/wall/*.mp4`) se descargan y reproducen solo cuando están a la vista. Mantenlos cortos y por debajo de ~3 MB.
 
 ## Publicar en Vercel (cuando la persona lo pida)
 

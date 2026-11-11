@@ -189,9 +189,22 @@ function StoryCurve() {
 // Muro de experimentos: las columnas se configuran en content.js (`wall`).
 const wallColumns = wall
 
+// Video del muro: se descarga y reproduce solo cuando está a la vista; con movimiento reducido muestra el primer cuadro.
+function WallVideo({ src, className }) {
+  const ref = useRef(null)
+  const reduce = useReducedMotion()
+  useEffect(() => {
+    const video = ref.current
+    if (!video || reduce) return
+    const observer = new IntersectionObserver(([entry]) => { if (entry.isIntersecting) video.play().catch(() => {}); else video.pause() }, { threshold: 0.25 })
+    observer.observe(video)
+    return () => observer.disconnect()
+  }, [reduce])
+  return <video ref={ref} src={src} loop muted playsInline disablePictureInPicture disableRemotePlayback preload={reduce ? 'metadata' : 'none'} aria-hidden="true" className={className} />
+}
+
 function WallTile({ tile }) {
   const { t } = useLang()
-  const reduce = useReducedMotion()
   if (tile.burst) return (
     <div className="flex aspect-square items-center justify-center rounded-xl bg-paper">
       <motion.div initial={{ rotate: -20, scale: 0.6 }} whileInView={{ rotate: -6, scale: 1 }} viewport={{ once: true }} transition={{ type: 'spring', stiffness: 180, damping: 12 }} className="w-[92%]">
@@ -208,7 +221,7 @@ function WallTile({ tile }) {
   if (tile.code) return <CodeArt art={tile.code} className="aspect-[4/3] rounded-xl" />
   const shape = tile.tall ? 'aspect-[3/5]' : tile.wide ? 'aspect-video' : tile.natural ? 'h-auto' : 'aspect-[4/3]'
   // Video corto, sin sonido y en bucle; con movimiento reducido se queda quieto.
-  if (tile.video) return wallVideos[tile.video] ? <video src={wallVideos[tile.video]} autoPlay={!reduce} loop muted playsInline disablePictureInPicture disableRemotePlayback preload="metadata" aria-hidden="true" className={`w-full rounded-xl object-cover shadow-sm ${shape}`} /> : null
+  if (tile.video) return wallVideos[tile.video] ? <WallVideo src={wallVideos[tile.video]} className={`w-full rounded-xl object-cover shadow-sm ${shape}`} /> : null
   // Sin foto todavía en src/assets/wall/: no se muestra nada.
   if (!wallImages[tile.img]) return null
   return <img src={wallImages[tile.img]} alt="" loading="lazy" className={`w-full rounded-xl object-cover object-top shadow-sm ${shape}`} />
