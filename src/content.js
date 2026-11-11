@@ -48,13 +48,14 @@ export const projects = [
 
 // Muro del inicio: 4 columnas de piezas.
 // { img: 'nombre' } → foto de src/assets/wall/nombre.(webp|png|jpg); si no existe, no se muestra.
-// { tall: true } → foto vertical. { code: 'deploy'|'gitflow'|'network' } → ilustración. { text: true } → texto del muro. { burst: true } → estrella.
+// { video: 'nombre' } → video corto de src/assets/wall/nombre.(mp4|webm), sin sonido y en bucle.
+// { tall: true } → vertical. { wide: true } → 16:9. { code: 'deploy'|'gitflow'|'network' } → ilustración. { text: true } → texto del muro. { burst: true } → estrella.
 // Usa fotos que no aparezcan en otra parte del sitio, para no repetirlas.
 export const wall = [
   [{ img: 'hackathon-inicio' }, { code: 'gitflow' }],
   [{ text: true }, { img: 'infra-2', tall: true }],
-  [{ burst: true }, { img: 'infra-1' }],
-  [{ code: 'deploy' }],
+  [{ burst: true }, { video: 'dc-racks', tall: true }],
+  [{ video: 'dc-acceso', wide: true }, { code: 'deploy' }],
 ]
 
 export const tabs = ['all', 'software', 'security', 'infra']

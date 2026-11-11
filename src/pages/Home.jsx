@@ -3,7 +3,7 @@ import { createPortal } from 'react-dom'
 import { motion, useMotionValue, useReducedMotion, useScroll, useTransform } from 'motion/react'
 import { ArrowRight, ArrowUpRight, Mail, MapPin } from 'lucide-react'
 import { contact, projects, wall } from '../content.js'
-import { projectImages, routes, useLang, wallImages } from '../lib.js'
+import { projectImages, routes, useLang, wallImages, wallVideos } from '../lib.js'
 import { Link, Rich } from '../components/Core.jsx'
 import { Burst, CodeArt, DashedArrow, Doodle, Eyes, SparkLines, SparkStar, Squiggle } from '../components/Decor.jsx'
 
@@ -191,6 +191,7 @@ const wallColumns = wall
 
 function WallTile({ tile }) {
   const { t } = useLang()
+  const reduce = useReducedMotion()
   if (tile.burst) return (
     <div className="flex aspect-square items-center justify-center rounded-xl bg-paper">
       <motion.div initial={{ rotate: -20, scale: 0.6 }} whileInView={{ rotate: -6, scale: 1 }} viewport={{ once: true }} transition={{ type: 'spring', stiffness: 180, damping: 12 }} className="w-[92%]">
@@ -205,7 +206,9 @@ function WallTile({ tile }) {
     </div>
   )
   if (tile.code) return <CodeArt art={tile.code} className="aspect-[4/3] rounded-xl" />
-  const shape = tile.tall ? 'aspect-[3/5]' : 'aspect-[4/3]'
+  const shape = tile.tall ? 'aspect-[3/5]' : tile.wide ? 'aspect-video' : 'aspect-[4/3]'
+  // Video corto, sin sonido y en bucle; con movimiento reducido se queda quieto.
+  if (tile.video) return wallVideos[tile.video] ? <video src={wallVideos[tile.video]} autoPlay={!reduce} loop muted playsInline preload="metadata" aria-hidden="true" className={`w-full rounded-xl object-cover shadow-sm ${shape}`} /> : null
   // Sin foto todavía en src/assets/wall/: no se muestra nada.
   if (!wallImages[tile.img]) return null
   return <img src={wallImages[tile.img]} alt="" loading="lazy" className={`w-full rounded-xl object-cover object-top shadow-sm ${shape}`} />

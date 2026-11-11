@@ -40,6 +40,7 @@ export function initialLang() {
 const byName = modules => Object.fromEntries(Object.entries(modules).map(([path, url]) => [path.split('/').pop().replace(/\.\w+$/, ''), url]))
 export const projectImages = byName(import.meta.glob('./assets/projects/*.{jpg,jpeg,png,webp}', { eager: true, import: 'default' }))
 export const wallImages = byName(import.meta.glob('./assets/wall/*.{jpg,jpeg,png,webp}', { eager: true, import: 'default' }))
+export const wallVideos = byName(import.meta.glob('./assets/wall/*.{mp4,webm}', { eager: true, import: 'default' }))
 export const aboutImages = Object.values(import.meta.glob('./assets/about/*.{jpg,jpeg,png,webp}', { eager: true, import: 'default' }))
 
 // Fotos de evidencia agrupadas por carpeta: src/assets/galeria/<key>/*.

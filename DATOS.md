@@ -80,10 +80,11 @@ Fuente: historial de git de cada repositorio. Se cuentan commits y PR, no línea
 
 - Capturas de proyecto → `iestp.webp` (pantalla de monitoreo del DC, con el nombre del instituto tapado), `nistrack.webp`, `termometro.webp`, `web-cloud.webp` (páginas públicas, 1280×800) y `erp.webp` (login del ERP)
 - Foto de perfil → `about/rodrigo.webp`
-- Muro del inicio → `wall/infra-2.webp` (equipo instalando en el DC), `wall/hackathon-inicio.webp`; falta `wall/infra-1.webp` (otra foto del IESTP, 4:3)
+- Muro del inicio → `wall/infra-2.webp` (equipo instalando en el DC), `wall/hackathon-inicio.webp`, videos `wall/dc-racks.mp4` y `wall/dc-acceso.mp4` (sin sonido, en bucle)
+- CEO Summit → `galeria/ceo-summit/1-evento.webp`
 - Hackathon → `galeria/piura-innova/` (1-equipo principal, 2-ambiente)
 - Regla: cada foto aparece en un solo lugar del sitio.
-- Pendientes → fotos del storage y gabinetes, diagramas de Visio y fotos del CEO Summit (van en `src/assets/galeria/<caso>/`)
+- Pendientes → fotos del storage y gabinetes, diagramas de Visio (van en `src/assets/galeria/<caso>/`)
 - Imagen para redes → `public/og.png`
 
 ## 12. Publicación
