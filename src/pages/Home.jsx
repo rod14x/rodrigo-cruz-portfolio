@@ -138,7 +138,7 @@ const storyNodes = [
   { key: 'scalable', point: 2, label: [190, 300], line: 'M225 320 Q262 360 288 395' },
   { key: 'ai', point: 3, label: [560, 330], arrow: 'M552 345 Q548 395 560 425 M548 412 L560 428 L572 413' },
   { key: 'secure', point: 4, label: [880, 175], line: 'M882 195 Q878 245 880 285' },
-  { key: 'maintainable', point: 5, label: [1255, 225], line: 'M1238 245 Q1195 280 1165 312' },
+  { key: 'maintainable', point: 5, label: [1290, 420], line: 'M1250 372 Q1205 362 1172 346' },
 ]
 
 function StoryCurve() {
