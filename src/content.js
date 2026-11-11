@@ -54,7 +54,7 @@ export const wall = [
   [{ img: 'hackathon-inicio' }, { code: 'gitflow' }],
   [{ text: true }, { img: 'infra-2', tall: true }],
   [{ burst: true }, { img: 'infra-1' }],
-  [{ img: 'hackathon-ambiente', tall: true }, { code: 'deploy' }],
+  [{ code: 'deploy' }],
 ]
 
 export const tabs = ['all', 'software', 'security', 'infra']
