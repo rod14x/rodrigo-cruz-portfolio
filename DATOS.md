@@ -69,17 +69,16 @@ Fuente: historial de git de cada repositorio. Se cuentan commits y PR, no línea
 - **ERP Cloud Tecnologies** · privado (sin enlace; solo la captura del login, sin datos reales). V1 (desde ene. 2026, equipo de tres): 76 de 120 commits, ~73 % del código vivo; Proyectos (Kanban), dashboard, KPIs bimonetarios, fixes post-Kali, asistente Gemini, despliegue en cPanel. Los otros dos: cotizaciones y motor financiero, alertas por correo, drag & drop del Kanban, reportes PDF. El 2FA (TOTP) se quitó temporalmente por la migración; volverá en la V2. V2 (desde oct. 2026, Laravel + React con Inertia, desarrollo local con Laravel Herd): único humano, 142 commits y 58 PR, hecho con agentes de IA (el historial no separa autoría).
 - **Termómetro de Resiliencia Operativa** · https://termometro.cloud-tecnologies.pe · jul.–oct. 2026 · ~52 commits (compañeros: 40 y 6) · base y flujo público, PDF en servidor con colas, correos, panel /admin, CI/CD por lftp, fix XSS de TanStack Start. Evaluación preliminar.
 - **Web Cloud Tecnologies** · https://www.cloud-tecnologies.pe · jun.–sep. 2026 · 34 de 47 commits en main · Astro, rediseño, WebGL, Preact, −712 KB de imágenes, fixes de formulario y memoria, auditoría, copy y conversión, móvil. Un compañero: GSAP, globo 3D, partners, efectos, /servicios, View Transitions. La accesibilidad está en ramas sin fusionar: no se publica hasta que llegue a main.
-- **KeptAI** · Hackathon Piura Innova 2026 · liderazgo técnico, frontend (React + TypeScript), corrección de errores del backend. Sin premios.
 - **Infraestructura IESTP** · colaborador externo · discos del storage Huawei OceanStor Dorado 3000 V6, AP, switches por consola, rotulado, inventario y diagramas Visio. Sin fibra ni diseño del centro de datos.
 
 ## 10. Eventos
 
-- Hackathon Piura Innova 2026 · 10 y 11 de oct. de 2026 · Piura · GDG Piura y Cámara de Comercio de Piura
+- Hackathon Piura Innova 2026 · 10 y 11 de oct. de 2026 · Piura · GDG Piura y Cámara de Comercio de Piura · propusieron KeptAI (no siguió adelante ni ganó): se muestra solo como evento y constancia, no como proyecto
 - CEO Summit 2026 · Empresas Resilientes · Casa Andina, Piura · asistente en representación de Cloud Tecnologies (fecha exacta sin confirmar)
 
 ## 11. Imágenes
 
-- Capturas de proyecto → `nistrack.webp`, `termometro.webp`, `web-cloud.webp` (páginas públicas, 1280×800) y `erp.webp` (login del ERP)
+- Capturas de proyecto → `iestp.webp` (recorte 16:10 de la foto de instalación), `nistrack.webp`, `termometro.webp`, `web-cloud.webp` (páginas públicas, 1280×800) y `erp.webp` (login del ERP)
 - Fotos → `galeria/iestp/instalacion-storage.webp` (también en el muro como `wall/infra-2.webp`)
 - Pendientes → foto de perfil (sin marco #OpenToWork), fotos del storage y gabinetes, diagramas de Visio, fotos del CEO Summit y de la hackathon (van en `src/assets/galeria/<caso>/`)
 - Imagen para redes → `public/og.png`

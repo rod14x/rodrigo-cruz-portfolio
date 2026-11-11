@@ -43,7 +43,6 @@ export const projects = [
   { key: 'erp', name: 'ERP Cloud Tecnologies', image: 'erp', art: 'erp', year: '2026', tags: ['Laravel', 'React + Inertia', 'IA · Gemini|AI · Gemini', 'GitHub Actions'], tabs: ['software', 'security'], tint: '#e3e6ec' },
   { key: 'termometro', name: 'Termómetro de Resiliencia|Resilience Thermometer', image: 'termometro', art: 'termometro', live: 'https://termometro.cloud-tecnologies.pe', year: '2026', tags: ['NIST SP 800-34', 'TanStack Start', 'PostgreSQL', 'PDF en servidor|Server-side PDF'], tabs: ['software', 'security'], tint: '#e7e5e2' },
   { key: 'web-cloud', name: 'Web Cloud Tecnologies|Cloud Tecnologies website', image: 'web-cloud', art: 'deploy', live: 'https://www.cloud-tecnologies.pe', year: '2026', tags: ['Astro', 'Preact', 'WebGL', 'Vercel'], tabs: ['software'], tint: '#ece6e0' },
-  { key: 'keptai', name: 'KeptAI', image: 'keptai', art: 'keptai', year: '2026', tags: ['React', 'TypeScript', 'Spring Boot', 'PostgreSQL'], tabs: ['software'], tint: '#dde6ee' },
   { key: 'iestp', name: 'Infraestructura IESTP|IESTP infrastructure', image: 'iestp', art: 'network', tags: ['Huawei OceanStor Dorado 3000 V6', 'Switching', 'Microsoft Visio'], tabs: ['infra'], tint: '#e4e2ea' },
 ]
 
@@ -151,20 +150,6 @@ export const content = {
           team: 'Según el historial de git, firmo 34 de los 47 commits de la rama principal. Un compañero aportó GSAP, el globo 3D, la red de partners, efectos visuales, las páginas de servicios y las transiciones entre vistas; yo revisé e integré su trabajo.',
           evidence: [],
         },
-        keptai: {
-          org: 'Hackathon Piura Innova 2026', badge: 'Líder técnico · Frontend',
-          title: 'Lideré técnicamente a mi equipo en la Hackathon Piura Innova 2026 con KeptAI.',
-          desc: 'Plataforma que concilia pagos recibidos por WhatsApp y calcula la rentabilidad por pedido.',
-          context: 'Hackathon Regional de Innovación Piura Innova 2026, organizada por GDG Piura y la Cámara de Comercio de Piura el 10 y 11 de octubre de 2026. Participé con el equipo de Cloud Tecnologies.',
-          problem: 'Responder al Reto 6, propuesto por Corpotex. Nuestra propuesta: conciliar los pagos que llegan por WhatsApp y calcular la rentabilidad de cada pedido.',
-          role: [
-            'Liderazgo técnico del equipo durante la hackathon.',
-            'Desarrollo del frontend con React y TypeScript.',
-            'Corrección de errores en el backend.',
-          ],
-          team: 'KeptAI fue un trabajo de equipo. Mi aporte se concentró en el liderazgo técnico, el frontend y la depuración del backend.',
-          evidence: [{ label: 'Constancia de participación (GDG Piura y Cámara de Comercio de Piura)' }],
-        },
         iestp: {
           org: 'Colaborador externo', badge: 'Apoyo en implementación',
           title: 'Participé en la instalación de almacenamiento empresarial y red de un instituto tecnológico.',
@@ -258,7 +243,7 @@ export const content = {
       eventsTitle: 'Eventos',
       eventsNote: 'donde he estado',
       events: [
-        { key: 'piura-innova', title: 'Hackathon Regional de Innovación Piura Innova 2026', meta: '10 y 11 de octubre de 2026 · Piura', role: 'Participante · líder técnico del equipo Cloud Tecnologies', text: 'Organizada por GDG Piura y la Cámara de Comercio de Piura. En el Reto 6 (Corpotex) desarrollamos KeptAI; lideré la parte técnica, construí el frontend y corregí errores del backend.', caseKey: 'keptai' },
+        { key: 'piura-innova', title: 'Hackathon Regional de Innovación Piura Innova 2026', meta: '10 y 11 de octubre de 2026 · Piura', role: 'Participante · líder técnico del equipo Cloud Tecnologies', text: 'Organizada por GDG Piura y la Cámara de Comercio de Piura. En el Reto 6 (Corpotex) propusimos KeptAI, una plataforma para conciliar pagos recibidos por WhatsApp y calcular la rentabilidad por pedido. Lideré la parte técnica, construí el frontend con React y TypeScript y corregí errores del backend.' },
         { key: 'ceo-summit', title: 'CEO Summit 2026 · Empresas Resilientes', meta: 'Casa Andina, Piura · Cámara de Comercio de Piura', role: 'Asistente en representación de Cloud Tecnologies', text: 'Asistí a las exposiciones sobre resiliencia y continuidad empresarial, hice networking y conversé sobre el Termómetro de Resiliencia Operativa y su evaluación gratuita ante riesgos del Fenómeno El Niño.', caseKey: 'termometro' },
       ],
       cv: { note: 'todo en una hoja', title: 'Mi CV', text: 'Experiencia, educación, habilidades y certificaciones en PDF.', open: 'Ver CV', download: 'Descargar PDF' },
@@ -357,20 +342,6 @@ export const content = {
           team: 'According to the git history, I authored 34 of the 47 commits on the main branch. A teammate contributed GSAP, the 3D globe, the partners network, visual effects, the service pages and the view transitions; I reviewed and integrated their work.',
           evidence: [],
         },
-        keptai: {
-          org: 'Piura Innova 2026 Hackathon', badge: 'Technical lead · Frontend',
-          title: 'I was the technical lead of my team at the Piura Innova 2026 Hackathon with KeptAI.',
-          desc: 'A platform that reconciles payments received through WhatsApp and calculates profit per order.',
-          context: 'Piura Innova 2026 Regional Innovation Hackathon, organized by GDG Piura and the Piura Chamber of Commerce on October 10 and 11, 2026. I took part with the Cloud Tecnologies team.',
-          problem: 'Answer Challenge 6, posed by Corpotex. Our proposal: reconcile payments that arrive through WhatsApp and calculate the profit of each order.',
-          role: [
-            'Technical leadership of the team during the hackathon.',
-            'Frontend development with React and TypeScript.',
-            'Fixing bugs in the backend.',
-          ],
-          team: 'KeptAI was a team effort. My contribution focused on technical leadership, the frontend and debugging the backend.',
-          evidence: [{ label: 'Certificate of participation (GDG Piura and Piura Chamber of Commerce)' }],
-        },
         iestp: {
           org: 'External collaborator', badge: 'Implementation support',
           title: 'I took part in installing enterprise storage and networking for a technical institute.',
@@ -464,7 +435,7 @@ export const content = {
       eventsTitle: 'Events',
       eventsNote: 'where I have been',
       events: [
-        { key: 'piura-innova', title: 'Piura Innova 2026 Regional Innovation Hackathon', meta: 'October 10–11, 2026 · Piura', role: 'Participant · technical lead of the Cloud Tecnologies team', text: 'Organized by GDG Piura and the Piura Chamber of Commerce. For Challenge 6 (Corpotex) we built KeptAI; I led the technical side, built the frontend and fixed backend bugs.', caseKey: 'keptai' },
+        { key: 'piura-innova', title: 'Piura Innova 2026 Regional Innovation Hackathon', meta: 'October 10–11, 2026 · Piura', role: 'Participant · technical lead of the Cloud Tecnologies team', text: 'Organized by GDG Piura and the Piura Chamber of Commerce. For Challenge 6 (Corpotex) we proposed KeptAI, a platform to reconcile payments received through WhatsApp and calculate profit per order. I led the technical side, built the frontend with React and TypeScript and fixed backend bugs.' },
         { key: 'ceo-summit', title: 'CEO Summit 2026 · Resilient Companies', meta: 'Casa Andina, Piura · Piura Chamber of Commerce', role: 'Attendee representing Cloud Tecnologies', text: 'I attended the talks on business resilience and continuity, networked, and talked about the Operational Resilience Thermometer and its free assessment of El Niño-related risks.', caseKey: 'termometro' },
       ],
       cv: { note: 'all on one page', title: 'My resume', text: 'Experience, education, skills and certifications as a PDF.', open: 'View resume', download: 'Download PDF' },
