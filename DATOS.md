@@ -32,7 +32,7 @@ Reglas: no inventar datos, separar siempre el aporte personal del trabajo del eq
 - Estudios → Estudiante de Ingeniería de Sistemas e Informática, UTP (sin indicar ciclo)
 - Enfoque → ciberseguridad aplicada al desarrollo y automatización de flujos de desarrollo; dirección profesional hacia DevSecOps y Cloud
 - Hoy → Tech Lead en Cloud Tecnologies: coordina el equipo, GitFlow, revisión de PR, CI/CD con GitHub Actions y SSH
-- IA → apoyo al desarrollo y a la revisión de código; en los repos de la empresa hay código escrito a mano y con agentes de IA
+- IA → diseña el sistema con fundamentos de ingeniería (algoritmos, bases de datos, procesos, diagramas de flujo) y orquesta varios agentes de IA (Orca, Claude Code, Codex) que escriben el código; valida con pruebas, CI y revisión. No escribe cada línea a mano, pero entiende el código.
 - Logros → Ethical Hacking Professional Certificate (CertiProf); participación en la Hackathon Piura Innova 2026
 
 ## 5. Experiencia

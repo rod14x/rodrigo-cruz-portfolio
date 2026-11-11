@@ -22,11 +22,11 @@ export const contact = {
 
 // Habilidades agrupadas (sin niveles). Los nombres de los grupos están en content.<idioma>.about.groups.
 export const skills = [
-  { key: 'dev', items: ['TypeScript', 'JavaScript', 'PHP', 'Laravel', 'Astro', 'React.js', 'Spring Boot', 'PostgreSQL', 'Desarrollo full stack|Full-stack development', 'Desarrollo de software|Software development', 'Debugging', 'Ingeniería|Engineering'] },
+  { key: 'dev', items: ['TypeScript', 'JavaScript', 'PHP', 'Laravel', 'Astro', 'React.js', 'Spring Boot', 'PostgreSQL', 'Desarrollo full stack|Full-stack development', 'Desarrollo de software|Software development', 'Debugging', 'Algoritmos|Algorithms', 'Modelado de bases de datos|Database modeling', 'Diagramas de flujo y procesos|Flowcharts & process modeling', 'Ingeniería|Engineering'] },
   { key: 'devops', items: ['GitHub', 'GitFlow', 'CI/CD', 'SSH'] },
   { key: 'security', items: ['Ciberseguridad|Cybersecurity', 'NIST', 'ISO 27001', 'Seguridad de aplicaciones web|Web application security', 'Ethical hacking', 'Pruebas de penetración|Penetration testing', 'Evaluación de vulnerabilidades|Vulnerability assessment', 'Seguridad de redes|Network security'] },
   { key: 'infra', items: ['Redes|Networking', 'Mantenimiento de equipos|Computer maintenance'] },
-  { key: 'ai', items: ['IA generativa|Generative AI', 'Prompt engineering'] },
+  { key: 'ai', items: ['Orquestación de agentes de IA|AI agent orchestration', 'Orca', 'Claude Code', 'Codex', 'IA generativa|Generative AI', 'Prompt engineering'] },
   { key: 'people', items: ['Liderazgo técnico|Technical leadership', 'Liderazgo|Leadership', 'Trabajo en equipo|Teamwork', 'Comunicación|Communication', 'Estrategia|Strategy', 'Ventas|Sales'] },
 ]
 
@@ -176,7 +176,7 @@ export const content = {
       intro: [{ t: 'Busco que el software del equipo sea… ' }, { b: 'ordenado' }, { t: ' en su flujo de trabajo, ' }, { b: 'seguro' }, { t: ' desde el desarrollo y ' }, { b: 'automatizado' }, { t: ' en sus despliegues.' }],
       nodes: {
         scalable: { label: 'Ordenado', text: [{ b: 'Ordenado:' }, { t: ' ramas con GitFlow y Pull Requests revisados antes de integrar.' }] },
-        ai: { label: 'IA', text: [{ b: 'IA:' }, { t: ' uso IA generativa como apoyo en la revisión de cambios y en el desarrollo.' }] },
+        ai: { label: 'IA', text: [{ b: 'IA:' }, { t: ' yo defino cómo debe comportarse el sistema; varios agentes de IA escriben el código y yo lo valido con pruebas y revisión.' }] },
         secure: { label: 'Seguro', text: [{ b: 'Seguro:' }, { t: ' quiero llevar más prácticas de seguridad al ciclo de desarrollo; hacia ahí apunto con DevSecOps.' }] },
         maintainable: { label: 'CI/CD', text: [{ b: 'CI/CD:' }, { t: ' despliegues con GitHub Actions y SSH en lugar de pasos manuales.' }] },
       },
@@ -201,13 +201,13 @@ export const content = {
       photoHint: 'Piura, Perú',
       items: [
         { icon: 'burst', title: 'Hoy en Cloud Tecnologies', text: 'Coordino al equipo de desarrollo con metodologías ágiles, gestiono el código con GitFlow, reviso los cambios e implemento flujos de CI/CD para que los despliegues sean más ordenados.' },
-        { icon: 'spark', title: 'IA como apoyo', text: 'Uso IA generativa como apoyo en el desarrollo y en la revisión de Pull Requests. En los repositorios de la empresa hay código escrito a mano y también con agentes de IA.' },
+        { icon: 'spark', title: 'Ingeniería primero, la IA como equipo', text: 'Con los fundamentos de mi carrera (algoritmos, bases de datos, procesos y diagramas de flujo) defino cómo debe comportarse el sistema. Después orquesto varios agentes de IA en paralelo con Orca, Claude Code y Codex para escribir el código, y lo valido con pruebas automatizadas, CI y revisión de cambios. No escribo cada línea a mano, pero entiendo el código y sé exactamente qué tiene que hacer.' },
         { icon: 'server', title: 'También en campo', text: 'He instalado almacenamiento empresarial, configurado switches por consola, conectado puntos de acceso y elaborado inventarios y diagramas de red.' },
         { icon: 'shield', title: 'Hacia DevSecOps y Cloud', text: 'Mi siguiente paso es incorporar más prácticas de seguridad al ciclo de desarrollo y crecer hacia DevSecOps y Cloud.' },
       ],
       skillsTitle: 'Habilidades',
       skillsNote: 'por áreas',
-      groups: { dev: 'Desarrollo', devops: 'Repositorios y despliegue', security: 'Ciberseguridad', infra: 'Infraestructura', ai: 'IA', people: 'Liderazgo y negocio' },
+      groups: { dev: 'Desarrollo', devops: 'Repositorios y despliegue', security: 'Ciberseguridad', infra: 'Infraestructura', ai: 'IA y agentes', people: 'Liderazgo y negocio' },
       experienceTitle: 'Experiencia',
       current: 'actual',
       caseLink: 'Ver caso',
@@ -217,7 +217,7 @@ export const content = {
           note: 'Ingresé al equipo como programador; hoy ocupo el rol de Tech Lead.',
           groups: [
             { title: 'Liderazgo técnico', points: ['Coordino el trabajo del equipo de desarrollo y los entregables.', 'Defino requerimientos y oriento las decisiones técnicas.', 'Reviso código, ayudo a resolver bloqueos y apoyo a desarrolladores junior.', 'Dirijo a dos desarrolladores junior y desarrollo junto a ellos NISTrack, el Termómetro de Resiliencia y el ERP interno.'] },
-            { title: 'Repositorios y revisión de cambios', points: ['Administro ramas en GitHub con GitFlow.', 'Reviso los Pull Requests antes de integrar funcionalidades.', 'Uso IA generativa como apoyo a la revisión y al desarrollo.'] },
+            { title: 'Repositorios y revisión de cambios', points: ['Administro ramas en GitHub con GitFlow.', 'Reviso los Pull Requests antes de integrar funcionalidades.', 'Orquesto agentes de IA para desarrollar y reviso sus cambios antes de integrarlos.'] },
             { title: 'Despliegues y operación', points: ['Configuro flujos de despliegue con GitHub Actions y automatizo tareas que antes eran manuales.', 'Realizo despliegues por SSH y controlo los entornos de ejecución.', 'Participo en el mantenimiento de la infraestructura interna y en la administración de la base de datos de producción.'] },
           ],
         },
@@ -368,7 +368,7 @@ export const content = {
       intro: [{ t: 'I want the team’s software to be… ' }, { b: 'organized' }, { t: ' in its workflow, ' }, { b: 'secure' }, { t: ' from development and ' }, { b: 'automated' }, { t: ' in its deployments.' }],
       nodes: {
         scalable: { label: 'Organized', text: [{ b: 'Organized:' }, { t: ' GitFlow branches and Pull Requests reviewed before merging.' }] },
-        ai: { label: 'AI', text: [{ b: 'AI:' }, { t: ' I use generative AI to support code review and development.' }] },
+        ai: { label: 'AI', text: [{ b: 'AI:' }, { t: ' I define how the system should behave; several AI agents write the code, and I validate it with tests and review.' }] },
         secure: { label: 'Secure', text: [{ b: 'Secure:' }, { t: ' I want to bring more security practices into the development cycle; that is where I am heading with DevSecOps.' }] },
         maintainable: { label: 'CI/CD', text: [{ b: 'CI/CD:' }, { t: ' deployments with GitHub Actions and SSH instead of manual steps.' }] },
       },
@@ -393,13 +393,13 @@ export const content = {
       photoHint: 'Piura, Peru',
       items: [
         { icon: 'burst', title: 'Today at Cloud Tecnologies', text: 'I coordinate the development team using agile methods, manage code with GitFlow, review changes and set up CI/CD pipelines so deployments are more orderly.' },
-        { icon: 'spark', title: 'AI as support', text: 'I use generative AI to support development and Pull Request reviews. The company’s repositories contain code written by hand and also with AI agents.' },
+        { icon: 'spark', title: 'Engineering first, AI as my team', text: 'With the fundamentals from my degree (algorithms, databases, processes and flowcharts) I define how the system should behave. Then I orchestrate several AI agents in parallel with Orca, Claude Code and Codex to write the code, and I validate it with automated tests, CI and code review. I do not write every line by hand, but I understand the code and know exactly what it has to do.' },
         { icon: 'server', title: 'Also on site', text: 'I have installed enterprise storage, configured switches over console, connected access points and produced network inventories and diagrams.' },
         { icon: 'shield', title: 'Heading to DevSecOps and Cloud', text: 'My next step is to bring more security practices into the development cycle and grow toward DevSecOps and Cloud.' },
       ],
       skillsTitle: 'Skills',
       skillsNote: 'by area',
-      groups: { dev: 'Development', devops: 'Repositories & deployment', security: 'Cybersecurity', infra: 'Infrastructure', ai: 'AI', people: 'Leadership & business' },
+      groups: { dev: 'Development', devops: 'Repositories & deployment', security: 'Cybersecurity', infra: 'Infrastructure', ai: 'AI & agents', people: 'Leadership & business' },
       experienceTitle: 'Experience',
       current: 'current',
       caseLink: 'View case',
@@ -409,7 +409,7 @@ export const content = {
           note: 'I joined the team as a developer; today I hold the Tech Lead role.',
           groups: [
             { title: 'Technical leadership', points: ['I coordinate the development team’s work and deliverables.', 'I define requirements and guide technical decisions.', 'I review code, help unblock issues and support junior developers.', 'I lead two junior developers and build NISTrack, the Resilience Thermometer and the internal ERP alongside them.'] },
-            { title: 'Repositories and code review', points: ['I manage GitHub branches with GitFlow.', 'I review Pull Requests before features are merged.', 'I use generative AI to support reviews and development.'] },
+            { title: 'Repositories and code review', points: ['I manage GitHub branches with GitFlow.', 'I review Pull Requests before features are merged.', 'I orchestrate AI agents for development and review their changes before merging.'] },
             { title: 'Deployments and operations', points: ['I set up deployment pipelines with GitHub Actions and automate tasks that used to be manual.', 'I deploy over SSH and keep runtime environments under control.', 'I take part in maintaining internal infrastructure and administering the production database.'] },
           ],
         },
