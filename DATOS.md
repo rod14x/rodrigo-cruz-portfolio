@@ -11,9 +11,9 @@ Reglas: no inventar datos, separar siempre el aporte personal del trabajo del eq
 - Nombre corto para el header → Rodrigo Cruz
 - Nombre completo para el footer → Rodrigo Cruz
 - Iniciales → RC
-- Rol → Tech Lead · Software SaaS, ciberseguridad e infraestructura
+- Rol → Tech Lead · Desarrollo con agentes de IA y ciberseguridad
 - Ciudad y país → Piura, Perú
-- Frase corta bajo el nombre → tech lead · ciberseguridad
+- Frase corta bajo el nombre → tech lead · ingeniería con IA
 
 ## 2. Contacto
 
@@ -24,8 +24,8 @@ Reglas: no inventar datos, separar siempre el aporte personal del trabajo del eq
 
 ## 3. Portada
 
-- Titular → "Lidero equipos que construyen y despliegan software… seguro"
-- Frase lateral → "Tech Lead en Cloud Tecnologies: SaaS, CI/CD, ciberseguridad e infraestructura."
+- Titular → "Orquesto agentes de IA para construir software… seguro"
+- Frase lateral → "Tech Lead en Cloud Tecnologies. Ingeniería primero; la IA, mi equipo."
 
 ## 4. Sobre mí
 

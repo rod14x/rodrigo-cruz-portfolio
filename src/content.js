@@ -62,17 +62,17 @@ export const tabs = ['all', 'software', 'security', 'infra']
 
 export const content = {
   es: {
-    meta: { title: 'Rodrigo Cruz | Tech Lead · Software, ciberseguridad e infraestructura', description: 'Portafolio de Rodrigo Cruz, Tech Lead en Cloud Tecnologies y estudiante de Ingeniería de Sistemas e Informática en Piura, Perú. Software SaaS, CI/CD, ciberseguridad e infraestructura.' },
+    meta: { title: 'Rodrigo Cruz | Tech Lead · Desarrollo con agentes de IA y ciberseguridad', description: 'Portafolio de Rodrigo Cruz, Tech Lead en Cloud Tecnologies (Piura, Perú). Diseña sistemas con fundamentos de ingeniería y los construye orquestando agentes de IA, con foco en ciberseguridad, CI/CD e infraestructura.' },
     skip: 'Saltar al contenido',
     langButton: 'Switch to English',
-    tagline: 'tech lead · ciberseguridad',
+    tagline: 'tech lead · ingeniería con IA',
     nav: { main: 'Navegación principal', social: 'Redes y contacto' },
     dock: { works: 'proyectos', about: 'sobre mí', links: 'links', allWorks: 'Todos los casos' },
     links: { linkedin: 'LinkedIn', email: 'Email', github: 'GitHub', cv: 'CV' },
     hero: {
       hello: 'Hola, soy Rodrigo Cruz',
-      headline: ['Lidero equipos que construyen y despliegan software…', 'seguro'],
-      side: ['Tech Lead en Cloud Tecnologies:', 'SaaS, CI/CD, ciberseguridad e infraestructura.'],
+      headline: ['Orquesto agentes de IA para construir software…', 'seguro'],
+      side: ['Tech Lead en Cloud Tecnologies.', 'Ingeniería primero; la IA, mi equipo.'],
       how: 'Okay… ¿y en qué he trabajado?',
     },
     projects: {
@@ -112,7 +112,7 @@ export const content = {
             'V1: correcciones de seguridad tras una prueba con Kali Linux, y autenticación en dos pasos por TOTP (RFC 6238).',
             'V1: asistente con IA (Gemini) que responde sobre los datos reales del ERP.',
             'V1: despliegue a producción en cPanel con un único script SQL de instalación, y cierre de una fuga de logs y archivos de prueba que se publicaban.',
-            'V2: migración a Laravel con React e Inertia, con pruebas automatizadas, integración continua en GitHub Actions y documentación de decisiones y despliegue.',
+            'V2: migración a Laravel con React e Inertia, construida orquestando agentes de IA: en 16 días, 142 commits, 58 Pull Requests y 571 pruebas automatizadas, con integración continua en GitHub Actions y documentación de decisiones y despliegue.',
           ],
           team: 'V1: éramos tres. Según git, firmé 76 de los 120 commits y cerca del 73 % del código propio que sigue vivo. Los otros dos hicieron el módulo de cotizaciones y el motor financiero, las alertas por correo, el arrastrar y soltar del Kanban y los reportes en PDF. V2: soy el único desarrollador humano y trabajo con agentes de IA (Claude Code, entre otros); el historial no separa lo que escribieron ellos de lo que escribí yo. Yo defino el trabajo, reviso y fusiono los 58 Pull Requests.',
           evidence: [{ label: 'Historial de git de los dos repositorios (privados)' }],
@@ -196,7 +196,7 @@ export const content = {
     about: {
       note: 'sobre mí',
       title: 'Un poco más sobre mí',
-      intro: [{ t: 'Soy estudiante de Ingeniería de Sistemas e Informática, enfocado en ' }, { h: 'ciberseguridad y automatización' }, { t: ' de flujos de desarrollo. Hoy soy Tech Lead en Cloud Tecnologies, donde lidero el diseño técnico y el despliegue de NISTrack.' }],
+      intro: [{ t: 'Soy estudiante de Ingeniería de Sistemas e Informática y desarrollo software ' }, { h: 'orquestando agentes de IA' }, { t: ', con foco en ciberseguridad y automatización. Hoy soy Tech Lead en Cloud Tecnologies, donde lidero el diseño técnico y el despliegue de NISTrack.' }],
       caption: 'Rodrigo Cruz',
       photoHint: 'Piura, Perú',
       items: [
@@ -254,17 +254,17 @@ export const content = {
     footer: 'Hecho con React, Tailwind CSS y Motion.',
   },
   en: {
-    meta: { title: 'Rodrigo Cruz | Tech Lead · Software, cybersecurity and infrastructure', description: 'Portfolio of Rodrigo Cruz, Tech Lead at Cloud Tecnologies and Systems and Computer Engineering student in Piura, Peru. SaaS software, CI/CD, cybersecurity and infrastructure.' },
+    meta: { title: 'Rodrigo Cruz | Tech Lead · AI-agent development and cybersecurity', description: 'Portfolio of Rodrigo Cruz, Tech Lead at Cloud Tecnologies (Piura, Peru). He designs systems with engineering fundamentals and builds them by orchestrating AI agents, with a focus on cybersecurity, CI/CD and infrastructure.' },
     skip: 'Skip to content',
     langButton: 'Cambiar a español',
-    tagline: 'tech lead · cybersecurity',
+    tagline: 'tech lead · AI-native engineering',
     nav: { main: 'Main navigation', social: 'Social and contact' },
     dock: { works: 'projects', about: 'about', links: 'links', allWorks: 'All case studies' },
     links: { linkedin: 'LinkedIn', email: 'Email', github: 'GitHub', cv: 'Resume' },
     hero: {
       hello: "Hi, I'm Rodrigo Cruz",
-      headline: ['I lead teams that build and ship software that is…', 'secure'],
-      side: ['Tech Lead at Cloud Tecnologies:', 'SaaS, CI/CD, cybersecurity and infrastructure.'],
+      headline: ['I orchestrate AI agents to build software that is…', 'secure'],
+      side: ['Tech Lead at Cloud Tecnologies.', 'Engineering first; AI is my team.'],
       how: 'Okay… so what have I worked on?',
     },
     projects: {
@@ -304,7 +304,7 @@ export const content = {
             'V1: security fixes after a test with Kali Linux, and TOTP two-factor authentication (RFC 6238).',
             'V1: AI assistant (Gemini) that answers questions about the ERP’s real data.',
             'V1: production deployment on cPanel with a single SQL install script, and closing a leak of logs and test files that were being published.',
-            'V2: migration to Laravel with React and Inertia, with automated tests, continuous integration on GitHub Actions and documented decisions and deployment.',
+            'V2: migration to Laravel with React and Inertia, built by orchestrating AI agents: in 16 days, 142 commits, 58 Pull Requests and 571 automated tests, with continuous integration on GitHub Actions and documented decisions and deployment.',
           ],
           team: 'V1: there were three of us. According to git, I authored 76 of the 120 commits and about 73% of the project’s own code that is still live. The other two built the quotes module and the financial engine, the email alerts, the Kanban drag and drop and the PDF reports. V2: I am the only human developer and I work with AI agents (Claude Code, among others); the history does not separate what they wrote from what I wrote. I define the work and review and merge the 58 Pull Requests.',
           evidence: [{ label: 'Git history of both (private) repositories' }],
@@ -388,7 +388,7 @@ export const content = {
     about: {
       note: 'about me',
       title: 'A little more about me',
-      intro: [{ t: 'I am a Systems and Computer Engineering student focused on ' }, { h: 'cybersecurity and automating' }, { t: ' development workflows. Today I am Tech Lead at Cloud Tecnologies, where I lead the technical design and deployment of NISTrack.' }],
+      intro: [{ t: 'I am a Systems and Computer Engineering student and I build software by ' }, { h: 'orchestrating AI agents' }, { t: ', with a focus on cybersecurity and automation. Today I am Tech Lead at Cloud Tecnologies, where I lead the technical design and deployment of NISTrack.' }],
       caption: 'Rodrigo Cruz',
       photoHint: 'Piura, Peru',
       items: [
