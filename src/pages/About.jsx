@@ -179,7 +179,8 @@ export default function About() {
               <h3 className="text-lg font-bold tracking-tight text-ink">{event.title}</h3>
               <p className="text-sm font-medium text-rust">{event.role}</p>
               <p className="mt-2 text-[15px] leading-7 text-zinc-600">{event.text}</p>
-              {photos.length > 0 && <ul className="mt-4 grid grid-cols-3 gap-2 sm:grid-cols-4">{photos.map((src, i) => <li key={src}><a href={src} {...external} className="block overflow-hidden rounded-lg"><img src={src} alt={`${event.title} ${i + 1}`} loading="lazy" className="aspect-square w-full object-cover" /></a></li>)}</ul>}
+              {photos.length > 0 && <a href={photos[0]} {...external} className="mt-4 block overflow-hidden rounded-xl"><img src={photos[0]} alt={`${event.title} 1`} loading="lazy" className="aspect-[16/10] w-full object-cover" /></a>}
+              {photos.length > 1 && <ul className="mt-2 grid grid-cols-3 gap-2 sm:grid-cols-4">{photos.slice(1).map((src, i) => <li key={src}><a href={src} {...external} className="block overflow-hidden rounded-lg"><img src={src} alt={`${event.title} ${i + 2}`} loading="lazy" className="aspect-square w-full object-cover" /></a></li>)}</ul>}
               {event.caseKey && <Link to={`${routes.works}#${event.caseKey}`} className={caseLink}>{t.about.caseLink}<ArrowRight size={16} aria-hidden="true" /></Link>}
             </motion.li>
           )

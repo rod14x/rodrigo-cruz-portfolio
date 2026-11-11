@@ -1,12 +1,11 @@
 # Fotos de evidencia
 
-Crea una carpeta por caso o evento y copia ahí las fotos (`.webp`, `.jpg` o `.png`). Aparecen solas en la web.
+Crea una carpeta por caso o evento y copia ahí las fotos (`.webp`, `.jpg` o `.png`). Aparecen solas en la web, ordenadas por nombre. En los eventos, la primera foto se muestra grande: ponle un nombre que empiece por `1-`.
 
 | Carpeta | Dónde se ve |
 |---|---|
 | `nistrack/` | Caso NISTrack en /proyectos |
 | `termometro/` | Caso Termómetro de Resiliencia en /proyectos |
-| `keptai/` | Caso KeptAI en /proyectos |
 | `iestp/` | Caso de infraestructura IESTP en /proyectos (discos del storage, gabinetes, diagramas de Visio) |
 | `piura-innova/` | Evento Hackathon Piura Innova 2026 en /sobre-mi |
 | `ceo-summit/` | Evento CEO Summit 2026 en /sobre-mi |
