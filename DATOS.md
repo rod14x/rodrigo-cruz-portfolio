@@ -90,4 +90,4 @@ Fuente: historial de git de cada repositorio. Se cuentan commits y PR, no línea
 ## 12. Publicación
 
 - Hosting → Vercel, con subdominio de la empresa (propuesto: `rodrigo.cloud-tecnologies.pe`)
-- URL final → pendiente
+- URL final → https://rodrigo.cloud-tecnologies.pe (provisional; luego dominio propio)
