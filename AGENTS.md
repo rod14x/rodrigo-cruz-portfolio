@@ -107,6 +107,7 @@ src/pages/            ← Home (/), Works (/proyectos: casos), About (/sobre-mi:
 - Tailwind 4 se configura con `@config "../tailwind.config.js"` en `src/index.css` y PostCSS (`@tailwindcss/postcss`).
 - La web respeta `prefers-reduced-motion`: sin animaciones si el sistema lo pide.
 - `vercel.json` define cabeceras de seguridad, incluida una CSP que solo permite recursos propios y Google Fonts. Si agregas un recurso externo (otra fuente, un script, un video de YouTube), permítelo en la CSP o el navegador lo bloqueará.
+- En pantallas de menos de 768 px se simplifican las animaciones que se repintan al hacer scroll (la curva aparece ya dibujada, el muro sin parallax, la barra inferior sin desenfoque). El vuelo de las tarjetas solo usa `transform` y `opacity`: si lo editas, no animes `width`, `height`, `top` ni `left`, ni midas el layout (`getBoundingClientRect`) en cada fotograma.
 - Los videos del muro (`src/assets/wall/*.mp4`) se descargan y reproducen solo cuando están a la vista. Mantenlos cortos y por debajo de ~3 MB.
 
 ## Publicar en Vercel (cuando la persona lo pida)

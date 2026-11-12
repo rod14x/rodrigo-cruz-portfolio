@@ -44,7 +44,7 @@ const workFolders = [
 
 function Popover({ children, label }) {
   return (
-    <motion.div role="menu" aria-label={label} initial={{ opacity: 0, y: 12, scale: 0.92 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, y: 8, scale: 0.95 }} transition={{ type: 'spring', stiffness: 420, damping: 30 }} className="absolute bottom-[calc(100%+10px)] left-1/2 w-44 origin-bottom -translate-x-1/2 rounded-2xl border border-zinc-900/10 bg-white/85 p-1.5 shadow-[0_18px_40px_-14px_rgba(0,0,0,0.35)] backdrop-blur-xl">
+    <motion.div role="menu" aria-label={label} initial={{ opacity: 0, y: 12, scale: 0.92 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, y: 8, scale: 0.95 }} transition={{ type: 'spring', stiffness: 420, damping: 30 }} className="absolute bottom-[calc(100%+10px)] left-1/2 w-44 origin-bottom -translate-x-1/2 rounded-2xl border border-zinc-900/10 bg-white/95 p-1.5 shadow-[0_18px_40px_-14px_rgba(0,0,0,0.35)] sm:bg-white/85 sm:backdrop-blur-xl">
       {children}
     </motion.div>
   )
@@ -71,7 +71,7 @@ export function Dock({ path }) {
 
   return (
     <nav ref={ref} aria-label={t.nav.main} className="fixed inset-x-0 bottom-3 z-50 flex justify-center px-4 sm:bottom-5">
-      <div className="flex items-end gap-1 rounded-[22px] border border-white/60 bg-white/55 px-2.5 pb-1.5 pt-2 shadow-[0_14px_40px_-12px_rgba(0,0,0,0.3),inset_0_1px_0_rgba(255,255,255,0.8)] backdrop-blur-xl">
+      <div className="flex items-end gap-1 rounded-[22px] border border-white/60 bg-white/90 px-2.5 pb-1.5 pt-2 shadow-[0_14px_40px_-12px_rgba(0,0,0,0.3),inset_0_1px_0_rgba(255,255,255,0.8)] sm:bg-white/55 sm:backdrop-blur-xl">
         <div className="relative">
           <AnimatePresence>{open === 'works' && (
             <Popover label={t.dock.works}>

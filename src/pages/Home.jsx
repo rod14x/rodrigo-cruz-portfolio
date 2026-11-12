@@ -1,4 +1,4 @@
-import { createRef, useEffect, useRef, useState } from 'react'
+import { createRef, useEffect, useRef, useState, useSyncExternalStore } from 'react'
 import { createPortal } from 'react-dom'
 import { motion, useMotionValue, useReducedMotion, useScroll, useTransform } from 'motion/react'
 import { ArrowRight, ArrowUpRight, Mail, MapPin } from 'lucide-react'
@@ -9,6 +9,16 @@ import { Burst, CodeArt, DashedArrow, Doodle, SparkLines, SparkStar, Squiggle, T
 
 // Colores de la curva (los mismos que --color-rust y --color-leaf en index.css).
 const ACCENT = '#2f4fd8', LEAF = '#0f766e'
+
+// Pantallas chicas (celulares): se simplifican las animaciones que se repintan en cada fotograma de scroll.
+const compactQuery = '(max-width: 767px)'
+function useCompact() {
+  return useSyncExternalStore(
+    notify => { const media = window.matchMedia(compactQuery); media.addEventListener('change', notify); return () => media.removeEventListener('change', notify) },
+    () => window.matchMedia(compactQuery).matches,
+    () => false,
+  )
+}
 
 // Vuelo del mazo, en alturas de ventana de scroll:
 // 0 → RISE_END: el mazo sube y se abre en abanico.
@@ -34,39 +44,48 @@ function Frame({ project, className = '', style }) {
 }
 
 // Tarjeta del mazo: fija en pantalla, interpola entre su sitio en el abanico y la imagen real de su proyecto.
+// Solo anima transform y opacity (los resuelve la GPU): el tamaño base es el del destino y se reduce con `scale`.
+// La posición del destino se mide cuando cambia el layout, no en cada fotograma de scroll.
 function FlyingCard({ project, index, total, target }) {
-  const x = useMotionValue(0), y = useMotionValue(0), width = useMotionValue(0), rotate = useMotionValue(0), opacity = useMotionValue(0)
+  const x = useMotionValue(0), y = useMotionValue(0), width = useMotionValue(0), scale = useMotionValue(1), rotate = useMotionValue(0), opacity = useMotionValue(0)
   const { scrollY } = useScroll()
 
   useEffect(() => {
-    const update = () => {
+    let box = null
+    const measure = () => {
       const el = target.current
       if (!el) return
-      const vw = window.innerWidth, vh = window.innerHeight
-      const { rise, fly } = flight(window.scrollY, index)
+      const r = el.getBoundingClientRect()
+      box = { left: r.left, top: r.top + window.scrollY, width: r.width, height: r.height }
+      width.set(r.width)
+    }
+    const update = () => {
+      if (!box) return
+      const vw = window.innerWidth, vh = window.innerHeight, scroll = window.scrollY
+      const { rise, fly } = flight(scroll, index)
       const offset = index - (total - 1) / 2
       const w0 = Math.min(vw * 0.78, 470)
       const h0 = w0 * 10 / 16 + 20
       const a = ease(rise)
-      const fromX = vw / 2 - w0 / 2 + offset * (vw < 768 ? 22 : 115) * a
-      const fromY = lerp(vh * 1.1, vh * 0.58 - h0 / 2, a) + Math.abs(offset) * 14 * a
-      const to = el.getBoundingClientRect()
       const f = ease(fly)
-      x.set(lerp(fromX, to.left, f))
-      y.set(lerp(fromY, to.top, f))
-      width.set(lerp(w0, to.width, f))
+      const fromX = vw / 2 + offset * (vw < 768 ? 22 : 115) * a
+      const fromY = lerp(vh * 1.1, vh * 0.58 - h0 / 2, a) + Math.abs(offset) * 14 * a + h0 / 2
+      x.set(lerp(fromX, box.left + box.width / 2, f) - box.width / 2)
+      y.set(lerp(fromY, box.top - scroll + box.height / 2, f) - box.height / 2)
+      scale.set(lerp(w0 / box.width, 1, f))
       rotate.set(lerp(offset * 5 * a, 0, f))
       opacity.set(fly >= 1 ? 0 : clamp01(rise * 5))
     }
-    update()
+    const refresh = () => { measure(); update() }
+    refresh()
     const unsubscribe = scrollY.on('change', update)
-    const observer = new ResizeObserver(update)
+    const observer = new ResizeObserver(refresh)
     observer.observe(document.body)
-    window.addEventListener('resize', update)
-    return () => { unsubscribe(); observer.disconnect(); window.removeEventListener('resize', update) }
-  }, [scrollY, target, index, total, x, y, width, rotate, opacity])
+    window.addEventListener('resize', refresh)
+    return () => { unsubscribe(); observer.disconnect(); window.removeEventListener('resize', refresh) }
+  }, [scrollY, target, index, total, x, y, width, scale, rotate, opacity])
 
-  return <Frame project={project} style={{ x, y, width, rotate, opacity, zIndex: 30 + total - index }} className="pointer-events-none fixed left-0 top-0 shadow-[0_30px_60px_-20px_rgba(0,0,0,0.35)]" />
+  return <Frame project={project} style={{ x, y, width, scale, rotate, opacity, zIndex: 30 + total - index }} className="pointer-events-none fixed left-0 top-0 will-change-transform shadow-[0_30px_60px_-20px_rgba(0,0,0,0.35)]" />
 }
 
 // Portada fija: el texto se apaga mientras el mazo sube.
@@ -145,6 +164,7 @@ function StoryCurve() {
   const { t } = useLang()
   const ref = useRef(null)
   const reduce = useReducedMotion()
+  const compact = useCompact()
   const [active, setActive] = useState(null)
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start 85%', 'center 55%'] })
   const draw = useTransform(scrollYProgress, [0, 1], [0, 1])
@@ -158,14 +178,14 @@ function StoryCurve() {
       </div>
       <div className="relative left-1/2 mt-6 w-screen -translate-x-1/2 sm:-mt-16">
         <svg viewBox="0 0 1400 520" className="h-auto w-full overflow-visible" role="group" aria-label={t.story.title.join(' ')}>
-          <motion.path d={curvePath} fill="none" stroke="#2e2e2e" strokeWidth="22" strokeLinecap="round" style={reduce ? undefined : { pathLength: draw }} />
+          <motion.path d={curvePath} fill="none" stroke="#2e2e2e" strokeWidth="22" strokeLinecap="round" style={reduce || compact ? undefined : { pathLength: draw }} />
           {storyNodes.map(node => {
             const [x, y] = curvePoints[node.point]
             const isAi = node.key === 'ai'
             const on = active === node.key
             return (
               <g key={node.key} role="button" tabIndex={0} aria-pressed={on} aria-label={t.story.nodes[node.key].label} onClick={() => choose(node.key)} onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); choose(node.key) } }} className="cursor-pointer outline-none [&:focus-visible_circle]:stroke-rust">
-                <motion.g initial={reduce ? false : { opacity: 0, scale: 0.4 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true, amount: 0.8 }} transition={{ type: 'spring', stiffness: 260, damping: 16, delay: 0.15 * node.point }} style={{ transformOrigin: `${x}px ${y}px` }}>
+                <motion.g initial={reduce || compact ? false : { opacity: 0, scale: 0.4 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true, amount: 0.8 }} transition={{ type: 'spring', stiffness: 260, damping: 16, delay: 0.15 * node.point }} style={{ transformOrigin: `${x}px ${y}px` }}>
                   <circle cx={x} cy={y} r="34" fill="transparent" />
                   <circle cx={x} cy={y} r={on || isAi ? 22 : 19} fill={isAi ? LEAF : on ? ACCENT : '#2e2e2e'} stroke={isAi ? LEAF : on ? ACCENT : '#2e2e2e'} strokeWidth="6" className="transition-all duration-300" />
                   <circle cx={x} cy={y} r={on || isAi ? 9 : 8} fill="#2e2e2e" />
@@ -224,7 +244,7 @@ function WallTile({ tile }) {
   if (tile.video) return wallVideos[tile.video] ? <WallVideo src={wallVideos[tile.video]} className={`w-full rounded-xl object-cover shadow-sm ${shape}`} /> : null
   // Sin foto todavía en src/assets/wall/: no se muestra nada.
   if (!wallImages[tile.img]) return null
-  return <img src={wallImages[tile.img]} alt="" loading="lazy" className={`w-full rounded-xl object-cover object-top shadow-sm ${shape}`} />
+  return <img src={wallImages[tile.img]} alt="" loading="lazy" decoding="async" className={`w-full rounded-xl object-cover object-top shadow-sm ${shape}`} />
 }
 
 function WallColumn({ tiles, progress, speed }) {
@@ -236,13 +256,15 @@ function ExperimentWall() {
   const { t } = useLang()
   const ref = useRef(null)
   const reduce = useReducedMotion()
+  const compact = useCompact()
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start end', 'end start'] })
   const speeds = reduce ? [0, 0, 0, 0] : [40, 110, 20, 80]
   const mobile = [[...wallColumns[0], ...wallColumns[2]], [...wallColumns[1], ...wallColumns[3]]]
   return (
     <section ref={ref} aria-label={t.wall.label} className="relative left-1/2 w-screen -translate-x-1/2 overflow-hidden py-16">
-      <div className="hidden grid-cols-4 gap-3 px-3 md:grid">{wallColumns.map((tiles, i) => <WallColumn key={i} tiles={tiles} progress={scrollYProgress} speed={speeds[i]} />)}</div>
-      <div className="grid grid-cols-2 gap-2 px-2 md:hidden">{mobile.map((tiles, i) => <WallColumn key={i} tiles={tiles} progress={scrollYProgress} speed={reduce ? 0 : i ? 50 : 15} />)}</div>
+      {compact
+        ? <div className="grid grid-cols-2 gap-2 px-2">{mobile.map((tiles, i) => <WallColumn key={i} tiles={tiles} progress={scrollYProgress} speed={0} />)}</div>
+        : <div className="grid grid-cols-4 gap-3 px-3">{wallColumns.map((tiles, i) => <WallColumn key={i} tiles={tiles} progress={scrollYProgress} speed={speeds[i]} />)}</div>}
     </section>
   )
 }
