@@ -20,7 +20,7 @@ Reglas: no inventar datos, separar siempre el aporte personal del trabajo del eq
 - Email → german.rodrigo.cruz14@gmail.com
 - LinkedIn → https://www.linkedin.com/in/rodrigo-cruz-5a9988356/
 - GitHub → https://github.com/rod14x (los repos de la empresa son privados: no se enlazan)
-- CV en PDF → no (cuando haya uno sin teléfono: `public/cv/cv.pdf` y `contact.cv: '/cv/cv.pdf'`)
+- CV en PDF → sí, versión del 14 nov. 2026 en español e inglés (`public/cv/cv-es.pdf`, `public/cv/cv-en.pdf`). Son copias web **sin teléfono**: si actualizas el CV, vuelve a quitar el teléfono antes de reemplazarlas.
 
 ## 3. Portada
 
@@ -37,8 +37,10 @@ Reglas: no inventar datos, separar siempre el aporte personal del trabajo del eq
 
 ## 5. Experiencia
 
-- Tech Lead · Cloud Tecnologies · Piura · desde oct. 2024 · tiempo parcial, híbrido. Ingresó como programador (fecha de paso a Tech Lead sin confirmar: no se publica).
-- Colaborador externo de infraestructura · IESTP (instituto de educación superior tecnológica). Referirse de forma general, sin nombrar empresas ni la institución.
+- Tech Lead · Cloud Tecnologies · Piura · desde ene. 2026 (cargo formal) · tiempo parcial, híbrido.
+- Desarrollador de software · Cloud Tecnologies · Piura · oct. 2024 – dic. 2025. Ya coordinaba parte del trabajo técnico.
+- Soporte técnico integral · Think Solutions SCRL · feb. 2024 – oct. 2024 · soporte N1/N2, diagnóstico, mantenimiento de hardware y software, ensamblaje y configuración de equipos (fuente: CV del 14 nov. 2026).
+- Colaborador externo de infraestructura · IESTP (instituto de educación superior tecnológica) · 2026. Referirse de forma general, sin nombrar empresas ni la institución.
 
 ## 6. Educación
 

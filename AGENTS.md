@@ -28,6 +28,7 @@ Al terminar, puedes ofrecer rellenar `DATOS.md` con lo cargado, para que quede c
   - Las claves deben coincidir: cada `projects[].key` necesita su entrada en `content.es.projects.items` y en `content.en.projects.items`.
 - **Separa el aporte personal del trabajo del equipo** en cada caso (campo `team`). No atribuyas a Rodrigo módulos, logros ni tareas de otras personas.
 - **Nada de controles que no funcionen:** enlaces vacíos (`''`) se ocultan; el CV solo aparece si `contact.cv` apunta a un PDF real.
+- **Textos breves.** Títulos de proyecto de una línea, 2 o 3 cifras en `stats` y viñetas concretas: la gente lee en diagonal. Lo largo va en `/proyectos`, detrás de "Ver más".
 - **No toques los componentes** (`src/components/`, `src/pages/`) salvo que la persona pida cambiar el diseño. Todo dato personal se edita en los archivos de la tabla.
 - **No subas a producción ni hagas `git push`** sin que la persona lo pida.
 
@@ -40,17 +41,17 @@ Al terminar, puedes ofrecer rellenar `DATOS.md` con lo cargado, para que quede c
 | Rol y ciudad para Google y redes (1) | `index.html` → `<title>`, `description`, `og:title`, `og:description` y `og:locale` · `src/content.js` → `content.<idioma>.meta` |
 | Frase bajo el nombre (1) | `content.<idioma>.tagline` |
 | Ciudad y país (1) | `content.<idioma>.closing.location`, `about.jobs[].place` |
-| Email, LinkedIn, GitHub, CV (2) | `contact` (el CV se sirve desde `public/cv/cv.pdf`; mientras `cv` sea `''` no se muestra) |
-| Saludo y titular (3) | `content.<idioma>.hero` (`hello`, `headline` = [texto, palabra destacada], `side`) |
+| Email, LinkedIn, GitHub, CV (2) | `contact` (`cv` = `{ es: '/cv/cv-es.pdf', en: '/cv/cv-en.pdf' }`, archivos en `public/cv/`; si falta un idioma se usa el otro; vacío no se muestra) |
+| Saludo y titular (3) | `content.<idioma>.hero` (`hello`, `headline` = [texto, [palabras que rotan en la píldora]], `side` = una frase, `cta` = textos de los botones) |
 | Sobre mí (4) | `content.<idioma>.about.intro` y `about.items` (tarjetas; `icon`: `burst`, `spark`, `server` o `shield`) |
 | Experiencia (5) | `content.<idioma>.about.jobs` (`current: true` solo en el trabajo actual; `note` = aclaración; `groups` = [{ `title`, `points` }]; `caseKey` enlaza a un caso) |
 | Educación (6) | `content.<idioma>.about.education` (`short` = nombre corto de la institución) |
 | Certificados (7) | `content.<idioma>.about.certs` (`highlight: true` en el principal, `expired: true` si venció) y `about.records` (constancias de participación) |
 | Eventos | `content.<idioma>.about.events` (fotos en `src/assets/galeria/<key>/`) |
 | Habilidades (8) | `skills` (quita los grupos vacíos; los nombres de grupo están en `about.groups`) |
-| Proyectos (9) | `projects` (datos técnicos) y `content.<idioma>.projects.items.<key>` (`org`, `badge`, `title`, `desc`, `context`, `problem`, `role` = lista, `team`, `evidence` = [{ `label`, `href`? }]) |
+| Proyectos (9) | `projects` (datos técnicos) y `content.<idioma>.projects.items.<key>` (`org`, `badge`, `title` = una línea, `stats` = 2 o 3 cifras reales, `desc`, `context`, `problem` (se muestra como "Reto"), `role` = lista (se ven 3, el resto con "Ver más"), `team`, `evidence` = [{ `label`, `href`? }]) |
 | Fotos de evidencia (10) | `src/assets/galeria/<key>/` (ver su `LEEME.md`) |
-| Muro de capturas (11) | `wall` + archivos en `src/assets/wall/` (si falta la foto, la pieza no se muestra; `code`: `deploy`, `gitflow` o `network`) |
+| Muro de capturas (11) | `wall` + archivos en `src/assets/wall/` (si falta la foto, la pieza no se muestra; `code`: `deploy`, `gitflow` o `network`; `agents`: terminal con `content.<idioma>.wall.agents`) |
 | Textos de la curva y del muro | `content.<idioma>.story` y `content.<idioma>.wall` (puedes adaptarlos a la persona) |
 | URL final (12) | `index.html` → descomenta `og:url`, `og:image` y `canonical` y reemplaza `https://TU-DOMINIO.vercel.app` |
 
@@ -72,7 +73,7 @@ Al terminar, puedes ofrecer rellenar `DATOS.md` con lo cargado, para que quede c
 | Captura de cada proyecto | `src/assets/projects/<image>.webp` | 16:10, ej. 1280×800 |
 | Capturas del muro | `src/assets/wall/<nombre>.webp` | 4:3, o 3:5 si `tall: true` |
 | Vista previa en redes | `public/og.png` | 1200×630 |
-| CV | `public/cv/cv.pdf` | PDF |
+| CV (uno por idioma) | `public/cv/cv-es.pdf` y `public/cv/cv-en.pdf` | PDF |
 
 Se aceptan `.webp`, `.jpg` y `.png`. Si la persona entrega imágenes muy pesadas (más de 300 KB), sugiere convertirlas a `.webp`.
 
@@ -104,11 +105,13 @@ src/pages/            ← Home (/), Works (/proyectos: casos), About (/sobre-mi:
 ## Notas técnicas
 
 - `lucide-react` está fijado en `0.468.0`, porque esa versión todavía exporta los íconos `Github` y `Linkedin`. No lo actualices sin cambiar esos íconos.
-- Tailwind 4 se configura con `@config "../tailwind.config.js"` en `src/index.css` y PostCSS (`@tailwindcss/postcss`).
+- Tailwind 4 se configura solo en `src/index.css` (bloque `@theme`: colores y fuentes) con PostCSS (`@tailwindcss/postcss`). No hay `tailwind.config.js`.
+- Tipografía: **Geist** (texto y títulos) y **Geist Mono** (etiquetas y datos), instaladas con `@fontsource-variable/*` e importadas en `src/main.jsx`; se sirven desde el propio sitio. Clases de apoyo en `index.css`: `.eyebrow` (etiqueta sobre un título), `.meta` (fechas, organización) y `.display` (títulos). No uses fuentes manuscritas ni adornos dibujados a mano: el tono es el de un tech lead.
+- `/proyectos` y `/sobre-mi` se cargan bajo demanda (`React.lazy` en `src/App.jsx`).
 - La web respeta `prefers-reduced-motion`: sin animaciones si el sistema lo pide.
-- `vercel.json` define cabeceras de seguridad, incluida una CSP que solo permite recursos propios y Google Fonts. Si agregas un recurso externo (otra fuente, un script, un video de YouTube), permítelo en la CSP o el navegador lo bloqueará.
+- `vercel.json` define cabeceras de seguridad, incluida una CSP que solo permite recursos propios (las fuentes también son propias). Si agregas un recurso externo (otra fuente, un script, un video de YouTube), permítelo en la CSP o el navegador lo bloqueará.
 - En pantallas de menos de 768 px se simplifican las animaciones que se repintan al hacer scroll (la curva aparece ya dibujada, el muro sin parallax, la barra inferior sin desenfoque). El vuelo de las tarjetas solo usa `transform` y `opacity`: si lo editas, no animes `width`, `height`, `top` ni `left`, ni midas el layout (`getBoundingClientRect`) en cada fotograma.
-- Los videos del muro (`src/assets/wall/*.mp4`) se descargan y reproducen solo cuando están a la vista. Mantenlos cortos y por debajo de ~3 MB.
+- Los videos del muro (`src/assets/wall/*.mp4`) se descargan y reproducen solo cuando están a la vista. Mantenlos cortos y por debajo de ~1 MB si se puede (máximo ~3 MB). Si existe una imagen con el mismo nombre (ej. `dc-acceso.webp`), se usa como imagen previa mientras carga el video.
 
 ## Publicar en Vercel (cuando la persona lo pida)
 

@@ -1,10 +1,13 @@
 @import "tailwindcss";
-@config "../tailwind.config.js";
+/* Las fuentes (Geist y Geist Mono) se importan en src/main.jsx y se sirven desde el propio sitio. */
 @theme {
   --color-paper: #f6f6f7;
   --color-ink: #18181b;
   --color-rust: #2f4fd8;   /* acento: azul cobalto */
   --color-leaf: #0f766e;   /* secundario: verde azulado */
+  --font-sans: "Geist Variable", "Segoe UI", system-ui, sans-serif;
+  --font-display: "Geist Variable", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "Geist Mono Variable", ui-monospace, "SFMono-Regular", Consolas, monospace;
 }
 @layer base {
   :root { color-scheme: light; font-synthesis: none; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
@@ -16,14 +19,20 @@
     background-size: 20px 20px;
   }
   ::selection { @apply bg-rust text-white; }
-  a:focus-visible, button:focus-visible { @apply rounded outline-2 outline-offset-4 outline-rust; }
+  a:focus-visible, button:focus-visible, summary:focus-visible { @apply rounded outline-2 outline-offset-4 outline-rust; }
 }
 @layer components {
   .terminal-cursor { animation: blink 1.1s steps(1) infinite; }
-  .hand { @apply font-hand leading-tight text-zinc-500; }
+  /* Etiqueta corta sobre un título (ej. "SOBRE MÍ"). */
+  .eyebrow { @apply font-mono text-xs font-medium uppercase tracking-[0.08em] text-zinc-500; }
+  /* Datos secundarios: fechas, organización, tecnologías. */
+  .meta { @apply font-mono text-[13px] leading-6 text-zinc-500; }
   .display { @apply font-display font-bold tracking-[-0.045em] text-ink; }
 }
 @keyframes blink { 50% { opacity: 0; } }
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }

@@ -27,7 +27,7 @@ npm run build     # compilar a dist/
 - **Foto:** `src/assets/about/` (vertical 4:5).
 - **Captura de cada proyecto:** `src/assets/projects/<key>.webp` (16:10).
 - **Fotos de evidencia y eventos:** `src/assets/galeria/<key>/` (ver su `LEEME.md`).
-- **CV:** copia el PDF a `public/cv/cv.pdf` y pon `cv: '/cv/cv.pdf'` en `contact`.
+- **CV (español e inglés):** copia los PDF a `public/cv/cv-es.pdf` y `public/cv/cv-en.pdf` y pon `cv: { es: '/cv/cv-es.pdf', en: '/cv/cv-en.pdf' }` en `contact`.
 - **Vista previa en redes:** `public/og.png` (1200×630).
 
 Las instrucciones para agentes de IA están en `AGENTS.md`.

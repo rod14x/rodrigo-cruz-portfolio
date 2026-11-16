@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useState } from 'react'
+import { contact } from './content.js'
 
 // Rutas de la web: el path de cada página.
 export const routes = { home: '/', works: '/proyectos', about: '/sobre-mi' }
@@ -27,6 +28,15 @@ export function navigate(to) {
 // Idioma.
 export const LangContext = createContext(null)
 export const useLang = () => useContext(LangContext)
+
+// CV del idioma activo. `contact.cv` puede ser una ruta ('/cv/cv.pdf') o una por idioma ({ es, en });
+// si falta el de un idioma se usa el otro. Vacío ('') = no se muestra.
+export function cvFor(lang) {
+  const cv = contact.cv
+  if (!cv || typeof cv === 'string') return cv || ''
+  return cv[lang] || cv.es || cv.en || ''
+}
+export const useCv = () => cvFor(useLang().lang)
 
 export function initialLang() {
   try {

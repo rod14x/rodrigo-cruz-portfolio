@@ -5,51 +5,6 @@ export function TerminalCursor({ className = '' }) {
   return <span aria-hidden="true" className={`terminal-cursor inline-block h-[0.82em] w-[0.14em] translate-y-[0.04em] rounded-[1px] bg-rust ${className}`} />
 }
 
-// Estrella de picos irregulares.
-const burstPoints = (() => {
-  const jitter = [0, 4, -3, 5, -2, 3, -4, 2, 5, -3, 3, -5, 2, 4, -2, 3]
-  return Array.from({ length: 32 }, (_, i) => {
-    const angle = (i / 32) * Math.PI * 2 - Math.PI / 2
-    const r = i % 2 ? 37 : 50 + jitter[(i / 2) % 16] / 2
-    return `${(50 + Math.cos(angle) * r).toFixed(1)},${(50 + Math.sin(angle) * r).toFixed(1)}`
-  }).join(' ')
-})()
-
-export function Burst({ className = '', children }) {
-  return (
-    <span className={`relative inline-flex items-center justify-center ${className}`}>
-      <svg aria-hidden="true" viewBox="0 0 100 100" className="absolute inset-0 h-full w-full"><polygon points={burstPoints} fill="currentColor" /></svg>
-      <span className="relative">{children}</span>
-    </span>
-  )
-}
-
-// Destello de líneas (esquina superior) y estrella pequeña (esquina inferior).
-export function SparkLines({ className = '' }) {
-  return (
-    <svg aria-hidden="true" viewBox="0 0 48 48" className={className} fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round">
-      <path d="M24 4v9M24 35v9M4 24h9M35 24h9M10 10l6 6M32 32l6 6M38 10l-6 6M16 32l-6 6" />
-    </svg>
-  )
-}
-
-export function SparkStar({ className = '' }) {
-  return <svg aria-hidden="true" viewBox="0 0 40 40" className={className}><path fill="currentColor" d="M20 0l3.6 12.2L34 6l-6.2 10.4L40 20l-12.2 3.6L34 34l-10.4-6.2L20 40l-3.6-12.2L6 34l6.2-10.4L0 20l12.2-3.6L6 6l10.4 6.2z" /></svg>
-}
-
-// Trazos a mano junto al saludo.
-export function Doodle({ className = '' }) {
-  return <svg aria-hidden="true" viewBox="0 0 24 20" className={className} fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"><path d="M4 18 2 6M10 16 9 2M16 17l4-9" /></svg>
-}
-
-export function Squiggle({ className = '' }) {
-  return <svg aria-hidden="true" viewBox="0 0 30 16" className={className} fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"><path d="M2 4c6 0 9 2 10 6s3 4 6 2 6-2 9 2" /></svg>
-}
-
-export function DashedArrow({ className = '' }) {
-  return <svg aria-hidden="true" viewBox="0 0 16 40" className={className} fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"><path d="M8 2v28" strokeDasharray="3 4" /><path d="M3 30l5 7 5-7" /></svg>
-}
-
 // Iconos del dock (estilo carpeta, avatar y enlace de macOS).
 export function FolderIcon({ color = '#7fb6f0', className = '' }) {
   return (
